@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE LONG SLOW GRIND | Premium Industrial Community</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#a9c7ff",
+              "surface-variant": "#353535",
+              "surface-dim": "#131313",
+              "surface-container": "#20201f",
+              "outline-variant": "#4f4634",
+              "surface-container-lowest": "#0e0e0e",
+              "tertiary-fixed": "#d6e3ff",
+              "on-tertiary": "#003062",
+              "on-background": "#e5e2e1",
+              "surface-tint": "#f6be39",
+              "background": "#131313",
+              "surface-container-highest": "#353535",
+              "tertiary-container": "#72a9ff",
+              "outline": "#9b8f7a",
+              "secondary-container": "#584414",
+              "inverse-on-surface": "#313030",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#584414",
+              "on-tertiary-fixed": "#001b3d",
+              "on-tertiary-fixed-variant": "#00468b",
+              "on-primary-fixed-variant": "#5c4300",
+              "on-secondary-fixed": "#261a00",
+              "error": "#ffb4ab",
+              "primary": "#f6be39",
+              "surface": "#131313",
+              "on-primary-container": "#503a00",
+              "on-surface": "#e5e2e1",
+              "primary-container": "#d4a017",
+              "inverse-primary": "#795900",
+              "surface-container-high": "#2a2a2a",
+              "inverse-surface": "#e5e2e1",
+              "tertiary": "#a9c7ff",
+              "on-primary-fixed": "#261a00",
+              "on-secondary": "#402d00",
+              "on-error": "#690005",
+              "secondary-fixed": "#ffdfa0",
+              "secondary-fixed-dim": "#e1c387",
+              "surface-container-low": "#1c1b1b",
+              "surface-bright": "#393939",
+              "primary-fixed-dim": "#f6be39",
+              "on-primary": "#402d00",
+              "primary-fixed": "#ffdfa0",
+              "on-secondary-container": "#cfb177",
+              "error-container": "#93000a",
+              "on-tertiary-container": "#003d7a",
+              "secondary": "#e1c387",
+              "on-surface-variant": "#d3c5ae"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            font-family: 'Space Grotesk', sans-serif;
+            color: #e5e2e1;
+        }
+        .grainy-overlay {
+            position: relative;
+        }
+        .grainy-overlay::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .industrial-gradient {
+            background: linear-gradient(135deg, #f6be39 0%, #d4a017 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="grainy-overlay">
+<!-- TopNavBar -->
+<nav class="bg-[#131313]/80 backdrop-blur-md text-[#D4A017] font-['Space_Grotesk'] font-bold uppercase tracking-wider docked full-width top-0 z-50 border-b border-[#f6be39]/15 flex justify-between items-center w-full px-6 py-4 mx-auto fixed">
+<div class="text-2xl font-black text-[#f6be39] tracking-tighter">THE LONG SLOW GRIND</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="#">Home</a>
+<a class="text-white/70 hover:text-white transition-colors duration-200" href="#">About</a>
+<a class="text-white/70 hover:text-white transition-colors duration-200" href="#">Community</a>
+<a class="text-white/70 hover:text-white transition-colors duration-200" href="#">Mentorship</a>
+<a class="text-white/70 hover:text-white transition-colors duration-200" href="#">Workshops</a>
+<a class="text-white/70 hover:text-white transition-colors duration-200" href="#">Resources</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="hidden lg:flex items-center space-x-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-white">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white">account_circle</span>
+</div>
+<button class="bg-[#f6be39] text-[#131313] px-6 py-2 text-sm font-black hover:bg-white transition-colors duration-200">JOIN THE GRIND</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale opacity-40" data-alt="dramatic wide shot of a structural steel construction site at twilight with heavy machinery and industrial lighting casting long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvMqipHduWmUv6TFIHk2MJOfBZY3a7w6pAlunXKfgE8jMOwzgTrCSaCv35DQ4kfwUkAiDdZzTsfjs91mkMUgPRDYFxl-KPMziiMJvlP0A3n49Rik_HbrThaxULtmu-NYWydX2ja_SE_a8b02IgUIdSh1Vv6Q66zysepXJBAyEWv7PMxYI5yLnTo9w9KzhZ_307Dgn4JigdQqEC8d1aGKQaiTmBQGHWnRa6TE3oGdB3SL96sz2A2aBKyWTp0iA_z6xRv1ioIJLbTKPq"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="container mx-auto px-6 relative z-20">
+<div class="max-w-4xl">
+<h1 class="text-7xl md:text-9xl font-bold tracking-tighter mb-6 leading-[0.9]">
+                        NO SHORTCUTS.<br/>
+<span class="text-primary industrial-gradient bg-clip-text text-transparent">JUST SYSTEMS.</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-10 font-light leading-relaxed">
+                        For contractors who are done being busy and ready to build a real business. Construct a legacy that outlasts the crew.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="industrial-gradient text-on-primary px-10 py-5 text-xl font-bold uppercase tracking-widest hover:scale-[1.02] transition-transform">
+                            JOIN THE GRIND
+                        </button>
+<button class="border-2 border-outline px-10 py-5 text-xl font-bold uppercase tracking-widest hover:bg-surface-variant transition-colors">
+                            VIEW BLUEPRINT
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Props -->
+<section class="py-24 bg-surface-container-low">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-l-4 border-primary">
+<!-- Mentorship -->
+<div class="bg-surface p-12 hover:bg-surface-container transition-colors border-r border-white/5">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" data-weight="fill">architecture</span>
+<h3 class="text-2xl font-bold uppercase mb-4 tracking-tight">Mentorship</h3>
+<p class="text-on-surface-variant leading-relaxed">Direct access to industry titans who have scaled 8-figure construction firms. No theory, just hard-won field intelligence.</p>
+</div>
+<!-- Community -->
+<div class="bg-surface p-12 hover:bg-surface-container transition-colors border-r border-white/5">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" data-weight="fill">groups</span>
+<h3 class="text-2xl font-bold uppercase mb-4 tracking-tight">Community</h3>
+<p class="text-on-surface-variant leading-relaxed">A private network of heavy hitters. Peer-to-peer accountability for men and women who build the world we live in.</p>
+</div>
+<!-- Tools -->
+<div class="bg-surface p-12 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" data-weight="fill">construction</span>
+<h3 class="text-2xl font-bold uppercase mb-4 tracking-tight">Tools</h3>
+<p class="text-on-surface-variant leading-relaxed">Proprietary bidding calculators, legal templates, and operational frameworks engineered specifically for the trade.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Testimonials -->
+<section class="py-24 bg-background">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter leading-none">
+                        BUILT BY<br/><span class="text-primary">THE FIELD.</span>
+</h2>
+<p class="label-md font-bold uppercase tracking-[0.2em] text-on-surface-variant">Verified Success Stories</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-high p-8 flex flex-col justify-between aspect-square">
+<p class="text-xl italic font-light leading-relaxed">"The Long Slow Grind took me from working 80 hours a week on-site to managing three crews from my office. The systems actually work."</p>
+<div class="flex items-center gap-4 mt-8">
+<img class="w-16 h-16 grayscale object-cover border-2 border-primary" data-alt="portrait of a rugged male contractor in a hard hat with a confident expression, outdoor job site background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwjExYJ03wAIagBlm1s14GbThpS_eQcw8IZWbiV3gumieWZy8usjpFpwZiyPV1qSs9TWHlJX7Yjcmf8qvBjjWfU6s5QvH37qTm4Wx5DA2MePZ9-U1mH3B7yDGszi6Ul4UHZ90KKJplQ0CwhqUqJYKV4SKsVeX-AqIjFyfVRReAz_vdZrfSXYaoe3PBUhoVxupxnxvRg9Eaq7XAgFLDu-sL35cFFkNBBfCdf0rh27elVNMuA6QAjN68pBaZUpVjnwVSjoh9H7fqoplZ"/>
+<div>
+<p class="font-bold uppercase tracking-wide">Marcus Thorne</p>
+<p class="text-sm text-primary uppercase tracking-tighter">Founder, Thorne Masonry</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-high p-8 flex flex-col justify-between aspect-square">
+<p class="text-xl italic font-light leading-relaxed">"This isn't just a business course. It's a brotherhood of builders who refuse to settle for 'good enough'. My revenue doubled in 12 months."</p>
+<div class="flex items-center gap-4 mt-8">
+<img class="w-16 h-16 grayscale object-cover border-2 border-primary" data-alt="portrait of a professional female civil engineer with a confident smile, wearing a safety vest in an industrial setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQDCXuaPiHqmaXRglUlceB2rvRxAaBiY4zh9pSeMAIqpVE-4JUwxhXmR1_pCdx-YptEWmIE7oD4drSz9G6eAgRc4I4jJMxbmzF3qZ-WpRm5Quj-ye6riq52LdJrKxJjvj3OrC4TZgjHNVV9aZ4AnKiT2QUig6-Dl4IHspa9kBVponpWewL9-st7Rz2In6AvuBOHDeYBFiZWpf_WBNOnpPoDPWe31aS92tmtQuNFlvvG1eD9kFHmWgHZ2x8YLHW9L58XbNJcm-dHb4f"/>
+<div>
+<p class="font-bold uppercase tracking-wide">Elena Rodriguez</p>
+<p class="text-sm text-primary uppercase tracking-tighter">CEO, Prime Structural</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-high p-8 flex flex-col justify-between aspect-square">
+<p class="text-xl italic font-light leading-relaxed">"The workshops alone are worth 10x the membership fee. We stopped leaking profit and started building sustainable wealth."</p>
+<div class="flex items-center gap-4 mt-8">
+<img class="w-16 h-16 grayscale object-cover border-2 border-primary" data-alt="portrait of an experienced senior construction foreman with grey hair and beard, wearing a flannel shirt, dark professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk1ov6UvKhAyqiabY1gj_BG3su32751wLLPxnEtaHP-gu6eXw41mqUoNMT7dqCl-yVGMqa1w4DRyr78-LXtxDGJuW8K02QbbDrP3RqP1MGYideCX5TZgoB_hHJJMptF5LkBcJYK-LLSl4fpnGPpIg68TBJk8R9YbYyqv-QT3cVZsrekIJ6YoB_zNfE5b-HqVxksKXEEc2ZQ9n-Wwp8J-qn7O24rIscU72ShPcBXqPpR7sKLBIHdGqQqDwvBcrwEzPvmE-ju8zYc6aj"/>
+<div>
+<p class="font-bold uppercase tracking-wide">Jameson Blake</p>
+<p class="text-sm text-primary uppercase tracking-tighter">Director, Blake &amp; Sons HVAC</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-32 bg-surface-container-highest relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center">
+<span class="text-[30rem] font-black tracking-tighter leading-none">GRIND</span>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
+<div>
+<div class="text-7xl md:text-9xl font-black text-primary mb-2">2500+</div>
+<div class="text-xl font-bold uppercase tracking-[0.3em]">Active Members</div>
+</div>
+<div>
+<div class="text-7xl md:text-9xl font-black text-primary mb-2">150+</div>
+<div class="text-xl font-bold uppercase tracking-[0.3em]">Workshops</div>
+</div>
+<div>
+<div class="text-7xl md:text-9xl font-black text-primary mb-2">50+</div>
+<div class="text-xl font-bold uppercase tracking-[0.3em]">Systems Guides</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-primary text-on-primary">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-none italic">
+                    STOP REPAIRING.<br/>START BUILDING.
+                </h2>
+<button class="bg-background text-primary px-16 py-6 text-2xl font-black uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all">
+                    GET ACCESS NOW
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+<p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">The premier industrial community for tradesmen and contractors committed to excellence.</p>
+</div>
+<div>
+<h4 class="text-[#D4A017] mb-4 font-bold">Resources</h4>
+<ul class="space-y-2">
+<li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Blog</a></li>
+<li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Events</a></li>
+<li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Shop</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#D4A017] mb-4 font-bold">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Privacy</a></li>
+<li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Terms</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#D4A017] mb-4 font-bold">Connect</h4>
+<ul class="space-y-2">
+<li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Contact</a></li>
+<li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+<li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+<div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+            © 2024 THE LONG SLOW GRIND. BUILT TO LAST.
+        </div>
+</footer>
+</body></html>

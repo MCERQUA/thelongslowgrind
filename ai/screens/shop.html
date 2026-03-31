@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ffb4ab",
+              "on-secondary-container": "#cfb177",
+              "surface": "#131313",
+              "on-tertiary-fixed-variant": "#00468b",
+              "outline-variant": "#4f4634",
+              "outline": "#9b8f7a",
+              "surface-container-low": "#1c1b1b",
+              "secondary": "#e1c387",
+              "primary-fixed-dim": "#f6be39",
+              "inverse-primary": "#795900",
+              "tertiary-container": "#72a9ff",
+              "on-primary": "#402d00",
+              "on-surface-variant": "#d3c5ae",
+              "on-primary-fixed-variant": "#5c4300",
+              "surface-container": "#20201f",
+              "surface-dim": "#131313",
+              "on-background": "#e5e2e1",
+              "on-tertiary-container": "#003d7a",
+              "on-secondary": "#402d00",
+              "on-tertiary": "#003062",
+              "inverse-on-surface": "#313030",
+              "surface-tint": "#f6be39",
+              "on-secondary-fixed": "#261a00",
+              "surface-container-highest": "#353535",
+              "surface-variant": "#353535",
+              "surface-container-lowest": "#0e0e0e",
+              "error-container": "#93000a",
+              "secondary-container": "#584414",
+              "tertiary-fixed-dim": "#a9c7ff",
+              "primary": "#f6be39",
+              "on-secondary-fixed-variant": "#584414",
+              "on-primary-fixed": "#261a00",
+              "inverse-surface": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "background": "#131313",
+              "on-error": "#690005",
+              "tertiary": "#a9c7ff",
+              "secondary-fixed-dim": "#e1c387",
+              "primary-container": "#d4a017",
+              "on-primary-container": "#503a00",
+              "secondary-fixed": "#ffdfa0",
+              "tertiary-fixed": "#d6e3ff",
+              "on-surface": "#e5e2e1",
+              "on-tertiary-fixed": "#001b3d",
+              "on-error-container": "#ffdad6",
+              "primary-fixed": "#ffdfa0",
+              "surface-bright": "#393939"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .industrial-grid {
+            background-image: radial-gradient(rgba(212, 160, 23, 0.1) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .noise-texture {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body class="text-on-surface overflow-x-hidden">
+<div class="noise-texture"></div>
+<!-- Top Navigation Bar -->
+<nav class="bg-[#131313]/80 backdrop-blur-xl border-b border-white/10 docked full-width top-0 z-50 flex justify-between items-center w-full px-6 py-4 max-w-full sticky">
+<div class="text-xl font-black text-[#D4A017] tracking-tighter uppercase font-['Space_Grotesk']">
+            THE LONG SLOW GRIND
+        </div>
+<div class="hidden md:flex items-center gap-10 font-['Space_Grotesk'] font-bold uppercase tracking-wider">
+<a class="text-[#D4A017] border-b-2 border-[#D4A017] pb-1" href="#">Shop</a>
+<a class="text-white/60 hover:text-white transition-colors" href="#">Workshops</a>
+<a class="text-white/60 hover:text-white transition-colors" href="#">Coaching</a>
+<a class="text-white/60 hover:text-white transition-colors" href="#">Blueprint</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-white/60 hover:text-[#f6be39] transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="text-white/60 hover:text-[#f6be39] transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<header class="relative w-full h-[614px] bg-surface-container-lowest flex items-center overflow-hidden border-b border-outline-variant/20">
+<div class="absolute inset-0 industrial-grid opacity-30"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+<div class="container mx-auto px-8 relative z-10 flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<span class="inline-block bg-primary text-on-primary px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">Built To Last</span>
+<h1 class="text-7xl md:text-8xl font-bold font-headline uppercase leading-none tracking-tighter mb-4 text-on-surface">
+                        Wear The <br/><span class="text-primary italic">Grind</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-md font-body tracking-wide">
+                        Gear built for people who build things. High-performance apparel designed for the industrial athlete and the daily laborer.
+                    </p>
+</div>
+<div class="md:w-1/2 flex justify-end">
+<div class="relative w-full aspect-square max-w-md bg-surface-container-high overflow-hidden border-l border-t border-primary/20">
+<img alt="Industrial worker gear" class="w-full h-full object-cover mix-blend-luminosity grayscale opacity-60" data-alt="Close-up of a rugged industrial canvas work jacket and high-quality leather gloves on a weathered steel workbench with warm directional light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzFatzP2IrE8jZdqOmDH96GyWb_-SQjD3uA8Szm_L1oiUKkYkeMDSygwVQ5h6i9iXD7YkteovuEYzivr2EKULrz-vlXEnYPeOK-6e5JAlWlBJ07K-KXqwZjF2_G9IJS8eWNDp3GhX-_baR3KqxSlfZfWqOO9Tgn-LVosDR0wp9mBKbVBdWlK4zuznuYwai1lzYKaKW3QmuLRAdVlHt__OH-w-fE-tiUN1qoJ_mflD_zQF2e0PMcdDZNUuHeohqrGm6O4ps5Nr3q0oX"/>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<div class="w-12 h-[2px] bg-primary"></div>
+<div class="w-4 h-[2px] bg-primary opacity-50"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Product Workspace -->
+<section class="container mx-auto px-8 py-16 flex flex-col lg:flex-row gap-12">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 shrink-0">
+<div class="sticky top-32">
+<h3 class="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-8 border-b border-primary/20 pb-2">Filter Catalog</h3>
+<ul class="space-y-4 font-label">
+<li>
+<button class="w-full text-left flex items-center justify-between group">
+<span class="text-lg font-bold uppercase tracking-widest text-on-surface group-hover:text-primary transition-colors">Hats</span>
+<span class="text-[10px] text-outline opacity-50">[08]</span>
+</button>
+</li>
+<li>
+<button class="w-full text-left flex items-center justify-between group">
+<span class="text-lg font-bold uppercase tracking-widest text-on-surface group-hover:text-primary transition-colors">Shirts</span>
+<span class="text-[10px] text-outline opacity-50">[12]</span>
+</button>
+</li>
+<li>
+<button class="w-full text-left flex items-center justify-between group border-l-2 border-primary pl-4">
+<span class="text-lg font-bold uppercase tracking-widest text-primary">Hoodies</span>
+<span class="text-[10px] text-primary opacity-50">[05]</span>
+</button>
+</li>
+<li>
+<button class="w-full text-left flex items-center justify-between group">
+<span class="text-lg font-bold uppercase tracking-widest text-on-surface group-hover:text-primary transition-colors">Accessories</span>
+<span class="text-[10px] text-outline opacity-50">[14]</span>
+</button>
+</li>
+</ul>
+<div class="mt-16 p-6 bg-surface-container-low border-l border-primary">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Member Blueprint</h4>
+<p class="text-xs text-outline leading-relaxed mb-4">Get 15% off your first order when you join the coaching platform.</p>
+<a class="text-[10px] font-bold uppercase tracking-widest text-primary hover:underline" href="#">Join Now →</a>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="flex justify-between items-end mb-12 border-b border-outline-variant/10 pb-6">
+<div>
+<h2 class="text-xs font-bold uppercase tracking-[0.3em] text-outline mb-1">Stock Availability</h2>
+<p class="text-3xl font-bold uppercase tracking-tighter">Current Inventory</p>
+</div>
+<div class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline-variant">
+                        Showing 1-6 of 39 items
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0">
+<!-- Product 1: The Grind Snapback -->
+<div class="group bg-surface-container-low border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" data-alt="A premium black structured snapback hat with a high-density 3D embroidered gold industrial logo centered on the front, set against a dark architectural background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkq7iFxEWeyIrNSAWIhHag9cjvp-eSbzuUaAdkfnWL1WarkVaBCQiQVe2otFHgw2peLv_3bBnT0dEUDFyyV6FCI8Rv3GPNu1JszKuR51pOTjO1lR1dfmidtuqSP46os35U1K7f-sj9TypC86bdbcwI3v-eAJ13Ws-ycYE9Yrb0vz2e3_SbYciYDtjC0hUfDBa7KB6VCHrRCv8l37paq5tJ8jJE-6fz-Iwet08UY25bf50bE-0ePN9TXzQVJYhXbArHG0tHnubFgGE-"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary text-[10px] px-2 py-1 font-black uppercase tracking-widest">New Arrival</span>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">The Grind Snapback Hat</h3>
+<p class="text-primary font-bold text-lg leading-tight">$35</p>
+</div>
+<p class="text-xs text-outline mb-6 flex-1">Black/Gold logo. Rigid construction for a lasting silhouette.</p>
+<button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Product 2: No Shortcuts Hoodie -->
+<div class="group bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" data-alt="Charcoal grey heavy-weight cotton hoodie flat lay on a textured concrete surface with sharp shadows and technical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnLCYy85v850C3uG3eMv9qqPwP9HPSjewwK3jAlquplK2T2yXtuVQ94CxhK2XQ1CRGOr1ZemMK1CnEOutkD1Fj1N1tdhMZ8NLPEIbZKYuJf_hcnRBKEUuC4GR4awNsgx8cG9tc53tbAqXT-M9rJbGWkdJQ0EKpGhG0lzgPGcMJNN0mAHFPK4-R9h5-xLBhJkWUPg6VPFUNh9BpgDYEwIjoT7G0aZrl0JkwmJDO6pxdwXce_94sIya_P6QNPveN1SvN9nMUe8dKEruO"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">No Shortcuts Hoodie</h3>
+<p class="text-primary font-bold text-lg leading-tight">$65</p>
+</div>
+<p class="text-xs text-outline mb-6 flex-1">Charcoal heavyweight fleece. Built for cold morning site visits.</p>
+<button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Product 3: Systems Over Hustle Tee -->
+<div class="group bg-surface-container-low border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" data-alt="A black premium cotton t-shirt featuring a clean minimalist gold typography design reading 'Systems Over Hustle' in a bold technical font." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgflCKmXN7SdGRjIDg97p0pBGcGn9mxnGT8aTxg1YKLj2qsv9jS8bMnRs_ijzbb-0YEwxBUWP9I2bugZY1uOyitbTXaK4DY6BWNmuhmPvY-ycB4V3tsfZK5dh4-O0EORPWUp1e0pcQ_VCZLZK0K-BoCxWD5v1wfgvyvvfPKA-fPrnL3WVBAstiElC8ApBJl1rwiSjLzn6O4W6MBMRrdHu7JD6_wPLtObv_vd_93JXAqUbeuo5r--PnO24kuBaBIyofzoBen7VLmCco"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">Systems Over Hustle Tee</h3>
+<p class="text-primary font-bold text-lg leading-tight">$30</p>
+</div>
+<p class="text-xs text-outline mb-6 flex-1">Black 100% cotton. Tailored fit with reinforced stitching.</p>
+<button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Product 4: The Daily Grind Coffee Mug -->
+<div class="group bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" data-alt="A matte black ceramic mug with a laser-etched gold logo of 'The Long Slow Grind' on a rough dark slate surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZI6ikdIdCzQdyLDdk2jBF14NgIryLawmBO1rNQZrQzi8y7vYStKYFvwigXh3hQtWZAalKeBDsTIjYb6qc39Rf2iym6dvbSzGZxHiiuK-nLoE667gbNojDH4IRmBYsjpnhotVTfNH5EGaWexVHwvq4dOngTvRjA43xx-5izSKgZlOBmu0-hIiWrwA5i82XhUMS35piLbYqErZLFqM989HnAR6gxZNeCrTmtwvHL9z2zrGYBoQfTHQcHuYXkJRl4SjJIidXgG7hygbJ"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">The Daily Grind Mug</h3>
+<p class="text-primary font-bold text-lg leading-tight">$20</p>
+</div>
+<p class="text-xs text-outline mb-6 flex-1">15oz matte black ceramic. Oversized handle for work gloves.</p>
+<button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Product 5: Hard Hat Sticker Pack -->
+<div class="group bg-surface-container-low border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" data-alt="Collection of industrial-style vinyl stickers with gold and black designs, waterproof and UV resistant, laid out on a blueprint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ4AcgyV_rKeQmPOSC7tD6jjULlrr2Vlq3mcsfxkjKXsbr5M7jLBjAvyaNcnhytqMiyLM8Qr5Xgu5IgtEGe6-VI8hOZ7WusiC7B6iudAB6x_Xkt4wyvc8Sjv-XmUKit2zn3--v-CdHe2f7vK7_mYoEe1DbbYK-NKZs8TsGhjisNaI3gnM7A1EpKkAYlw7nwCEiu2R7ozmDeJIgK1-WMgkFpgfx4tcOK_wVSDydkgDB81b8a44Ub7VenOiTFY5AZ3kMk2qpyr2ovX_n"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">Hard Hat Sticker Pack</h3>
+<p class="text-primary font-bold text-lg leading-tight">$12</p>
+</div>
+<p class="text-xs text-outline mb-6 flex-1">Set of 10 weather-resistant vinyl stickers. Built for the site.</p>
+<button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Product 6: Long Slow Grind Work Jacket -->
+<div class="group bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" data-alt="Premium brown canvas work jacket with heavy-duty brass zippers and a small gold logo on the chest pocket, hanging against a dark wood wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKkjVNQT61ly7Th85OOTijAAcG4J_ds5tb_1BUQHrj5JuuMyOREwprxfBj-gpS-XMJZ4jpTY6300A3NQdbshDIild-o4hQRVtuIphJ_Dv8jfDZ-aKEIC8L5ygHNwavuQP33yu2ghTME_OIcKlpiUY_WAYjPKnhscH13oFsax1Nu9D-tZINAnpJQZNGd3gJ7mii64qJfiwbsxIvw2zN1dpE_HsD1ibu860AXCVkIKBRx13nQ9bLCkX9akUseQHOOeHlMBc5s3f0pQoh"/>
+<span class="absolute top-4 right-4 bg-on-surface text-surface text-[10px] px-2 py-1 font-black uppercase tracking-widest">Premium Tier</span>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">LSG Work Jacket</h3>
+<p class="text-primary font-bold text-lg leading-tight">$120</p>
+</div>
+<p class="text-xs text-outline mb-6 flex-1">Heavy Canvas Brown. Triple-stitched seams and thermal lining.</p>
+<button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+</div>
+<!-- Load More / Pagination Segmented Bar -->
+<div class="mt-16 flex flex-col items-center">
+<div class="w-full h-2 flex gap-1 mb-6">
+<div class="h-full flex-1 bg-primary"></div>
+<div class="h-full flex-1 bg-primary"></div>
+<div class="h-full flex-1 bg-primary"></div>
+<div class="h-full flex-1 bg-surface-container-highest"></div>
+<div class="h-full flex-1 bg-surface-container-highest"></div>
+</div>
+<button class="px-12 py-4 border border-outline-variant text-[10px] font-bold uppercase tracking-[0.4em] text-on-surface hover:bg-white/5 transition-colors">
+                        Expand Inventory
+                    </button>
+</div>
+</div>
+</section>
+<!-- Newsletter Slab -->
+<section class="bg-surface-container-highest py-20 border-t border-outline-variant/30">
+<div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-4xl font-bold uppercase tracking-tighter mb-4 leading-tight">Join the blueprint <br/>correspondence</h2>
+<p class="text-outline max-w-md">Technical updates, early drop access, and the methodology of the grind delivered to your terminal weekly.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-0 border-l border-primary pl-0 sm:pl-8">
+<input class="flex-1 bg-surface-container border-none p-6 font-label text-sm uppercase tracking-widest focus:ring-1 focus:ring-primary" placeholder="ENTER TERMINAL EMAIL" type="email"/>
+<button class="bg-primary text-on-primary font-black uppercase px-10 py-6 text-sm tracking-widest hover:bg-primary-container transition-colors">Register</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131313] flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-6 font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.05rem]">
+<div class="text-lg font-bold text-white uppercase">THE LONG SLOW GRIND</div>
+<div class="flex gap-8 text-white/40">
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Shipping</a>
+<a class="hover:text-white transition-colors" href="#">Returns</a>
+</div>
+<div class="text-white/40">
+            © 2024 THE LONG SLOW GRIND. BUILT TO LAST.
+        </div>
+</footer>
+</body></html>

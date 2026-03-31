@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workshops | THE LONG SLOW GRIND</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-fixed-dim": "#a9c7ff",
+            "surface-variant": "#353535",
+            "surface-dim": "#131313",
+            "surface-container": "#20201f",
+            "outline-variant": "#4f4634",
+            "surface-container-lowest": "#0e0e0e",
+            "tertiary-fixed": "#d6e3ff",
+            "on-tertiary": "#003062",
+            "on-background": "#e5e2e1",
+            "surface-tint": "#f6be39",
+            "background": "#131313",
+            "surface-container-highest": "#353535",
+            "tertiary-container": "#72a9ff",
+            "outline": "#9b8f7a",
+            "secondary-container": "#584414",
+            "inverse-on-surface": "#313030",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#584414",
+            "on-tertiary-fixed": "#001b3d",
+            "on-tertiary-fixed-variant": "#00468b",
+            "on-primary-fixed-variant": "#5c4300",
+            "on-secondary-fixed": "#261a00",
+            "error": "#ffb4ab",
+            "primary": "#f6be39",
+            "surface": "#131313",
+            "on-primary-container": "#503a00",
+            "on-surface": "#e5e2e1",
+            "primary-container": "#d4a017",
+            "inverse-primary": "#795900",
+            "surface-container-high": "#2a2a2a",
+            "inverse-surface": "#e5e2e1",
+            "tertiary": "#a9c7ff",
+            "on-primary-fixed": "#261a00",
+            "on-secondary": "#402d00",
+            "on-error": "#690005",
+            "secondary-fixed": "#ffdfa0",
+            "secondary-fixed-dim": "#e1c387",
+            "surface-container-low": "#1c1b1b",
+            "surface-bright": "#393939",
+            "primary-fixed-dim": "#f6be39",
+            "on-primary": "#402d00",
+            "primary-fixed": "#ffdfa0",
+            "on-secondary-container": "#cfb177",
+            "error-container": "#93000a",
+            "on-tertiary-container": "#003d7a",
+            "secondary": "#e1c387",
+            "on-surface-variant": "#d3c5ae"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Space Grotesk"],
+            "label": ["Space Grotesk"]
+          },
+          borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+        },
+      },
+    }
+</script>
+<style>
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: #131313;
+      color: #e5e2e1;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .industrial-grid {
+      background-image: radial-gradient(circle, #353535 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .noise-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .blueprint-accent {
+      background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(246, 190, 57, 0.05) 10px, rgba(246, 190, 57, 0.05) 20px);
+    }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<div class="noise-overlay"></div>
+
+<!-- Navigation -->
+<nav class="fixed top-0 z-50 w-full px-6 py-4 flex justify-between items-center bg-[#131313]/80 backdrop-blur-md border-b border-[#f6be39]/15">
+  <a href="index.html" class="text-2xl font-black text-[#f6be39] tracking-tighter font-headline uppercase">THE LONG SLOW GRIND</a>
+  <div class="hidden md:flex items-center space-x-8 font-headline text-sm font-bold uppercase tracking-wider">
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="index.html">Home</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="about.html">About</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="community.html">Community</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="mentorship.html">Mentorship</a>
+    <a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="workshops.html">Workshops</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="resources.html">Resources</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="blog.html">Blog</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="events.html">Events</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="shop.html">Shop</a>
+  </div>
+  <div class="flex items-center space-x-4">
+    <button class="hidden sm:block bg-[#f6be39] text-[#131313] px-6 py-2 text-sm font-black uppercase tracking-widest hover:bg-white transition-colors duration-200">JOIN THE GRIND</button>
+    <!-- Mobile menu toggle -->
+    <button id="menu-toggle" class="md:hidden text-[#f6be39] focus:outline-none">
+      <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+      <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#131313]/98 backdrop-blur-lg pt-24 px-8 flex flex-col space-y-6 font-headline text-2xl font-bold uppercase tracking-wider">
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors py-2 border-b border-white/5" href="index.html">Home</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors py-2 border-b border-white/5" href="about.html">About</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors py-2 border-b border-white/5" href="community.html">Community</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors py-2 border-b border-white/5" href="mentorship.html">Mentorship</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-[#f6be39] py-2 border-b border-[#f6be39]/30" href="workshops.html">Workshops</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors py-2 border-b border-white/5" href="resources.html">Resources</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors py-2 border-b border-white/5" href="blog.html">Blog</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors py-2 border-b border-white/5" href="events.html">Events</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors py-2 border-b border-white/5" href="shop.html">Shop</a>
+  <div class="pt-6">
+    <button class="w-full bg-[#f6be39] text-[#131313] px-6 py-4 text-lg font-black uppercase tracking-widest hover:bg-white transition-colors duration-200">JOIN THE GRIND</button>
+  </div>
+</div>
+
+<main class="pt-24 min-h-screen industrial-grid">
+
+  <!-- Hero Section -->
+  <section class="px-8 py-20 md:py-32 border-b border-outline-variant/20 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/3 h-full blueprint-accent -z-10 opacity-30"></div>
+    <div class="max-w-7xl mx-auto flex flex-col items-start gap-4">
+      <span class="bg-primary/10 text-primary px-3 py-1 text-xs font-bold tracking-[0.2em] uppercase border border-primary/20">Operations protocol</span>
+      <h1 class="text-6xl md:text-8xl font-bold font-headline uppercase leading-[0.9] tracking-tighter max-w-4xl">
+        Level Up Your <span class="text-primary italic">Trade Business</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mt-6 font-light leading-relaxed">
+        Master the mechanics of construction business growth through technical precision and hardened operational strategies. No fluff. Just the grind.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter Tabs -->
+  <section class="sticky top-[72px] z-40 bg-surface px-8 py-6 border-b border-outline-variant/30 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-4">
+      <button class="bg-primary text-on-primary px-6 py-2 font-bold uppercase text-sm tracking-widest transition-all">All</button>
+      <button class="bg-surface-container-high text-on-surface-variant px-6 py-2 font-bold uppercase text-sm tracking-widest hover:text-primary transition-all">Upcoming</button>
+      <button class="bg-surface-container-high text-on-surface-variant px-6 py-2 font-bold uppercase text-sm tracking-widest hover:text-primary transition-all">Recorded</button>
+      <button class="bg-surface-container-high text-on-surface-variant px-6 py-2 font-bold uppercase text-sm tracking-widest hover:text-primary transition-all">Free</button>
+      <div class="ml-auto hidden md:flex items-center gap-2 text-on-surface-variant/50 uppercase text-[10px] tracking-widest">
+        <span class="material-symbols-outlined text-xs">settings_input_component</span>
+        Technical Calibration Active
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshop Grid -->
+  <section class="px-8 py-12">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+        <!-- Card 1: Pricing For Profit -->
+        <div class="group relative flex flex-col md:flex-row bg-surface-container-low border-l-4 border-primary overflow-hidden">
+          <div class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
+            <img alt="Pricing For Profit workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSZfvRhhKHADWq5-6qJsIKf7RUErZitHl08bUnnhcadBdZ4dD0Tk1VIQmNGzlv9sRLN_5-FgSNs3IAbrgPSMmBKN3vUKSX9YWvJ6EhAcWCMUhqTErBAzX8P-3CFfDT6FNa7TKkF-sYo5JSvj3ZnEEVRg2aquYkjTAFo5Ws1T4xJUG4A49IyTiZox55WBnOW1wjmlDbV0qHfHzVxc1eKVLlA0m7fSiI3paarFBVjRU5BvPTNcHEDS56s4q1LWtZLLgadMN63TjfoBQX"/>
+          </div>
+          <div class="flex-1 p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] text-primary font-bold tracking-[0.2em] uppercase">Upcoming / LIVE</span>
+                <span class="text-[10px] text-on-surface-variant uppercase tracking-widest">ID: WS-041</span>
+              </div>
+              <h3 class="text-3xl font-bold font-headline uppercase leading-none mb-4 group-hover:text-primary transition-colors">Pricing For Profit</h3>
+              <div class="flex items-center gap-4 text-on-surface-variant text-sm mb-6">
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Oct 12, 2024</div>
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 120 MIN</div>
+              </div>
+            </div>
+            <button class="w-full bg-primary text-on-primary py-4 font-bold uppercase tracking-[0.1em] hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+              Register <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Building Your First SOP -->
+        <div class="group relative flex flex-col md:flex-row bg-surface-container-low border-l-4 border-outline-variant/30 overflow-hidden opacity-90 hover:opacity-100 transition-opacity">
+          <div class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
+            <img alt="Building Your First SOP workshop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4t5GkKKQL3gm_FAu8nNpjvj2-Zqn2bvvK7770jpUJrNl0vkDOM8Yr4Lo7eXFIHJBmgrYGujG-_4WfSvk4d0Q9L85CVj_VtaQeKUWfvIlmMCwgyOffRLQVC0K2cwe6l_FjH2nIWoEtWSsjjZPTv5b2IT0Ve7cJl3OfQ0WmD1iptIPc0zB_w4l-FkuhJC8WgngtqKlYNE-IIi26-vFYCwUelm-VIU7TmkAZrkU5zYyuS7t9MeNE1m1un2D7a5Ut9syXskP72M3W2MVR"/>
+          </div>
+          <div class="flex-1 p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] text-on-surface-variant font-bold tracking-[0.2em] uppercase">Recorded / ARCHIVE</span>
+                <span class="text-[10px] text-on-surface-variant uppercase tracking-widest">ID: WS-039</span>
+              </div>
+              <h3 class="text-3xl font-bold font-headline uppercase leading-none mb-4 group-hover:text-primary transition-colors">Building Your First SOP</h3>
+              <div class="flex items-center gap-4 text-on-surface-variant text-sm mb-6">
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">history</span> Available Now</div>
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 95 MIN</div>
+              </div>
+            </div>
+            <button class="w-full bg-surface-container-high text-on-surface py-4 font-bold uppercase tracking-[0.1em] hover:bg-surface-container-highest border border-outline-variant/30 transition-all flex items-center justify-center gap-2">
+              Watch Recording <span class="material-symbols-outlined text-sm">play_circle</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Hiring Your First Employee -->
+        <div class="group relative flex flex-col md:flex-row bg-surface-container-low border-l-4 border-primary overflow-hidden">
+          <div class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
+            <img alt="Hiring Your First Employee workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBiuWrb_xw4yw2jnaIV0tBgu9XjkUhff1eYxvPJOeZVlC7nhD1lksAlz-cp4LqeUbaXSl_jIi3jbTRoofKxYLeXXokDlRHea9CfaJYlIA1rVKcsw66qo0e6IFVw-7Ycd8EP8BD_StvCsRcXZywHJCFdDijP6iyQWN4N5PvAw-oRrq_8mJlf-1Lv3D6IgVQ0VpLWC6eJ241OFOKou8Lkmr6G7eTdiMQi9dh_830h4x-tMqMMLBnF8rXFk1Gp4BR771JgQaVEC8DCmFm"/>
+          </div>
+          <div class="flex-1 p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] text-primary font-bold tracking-[0.2em] uppercase">Upcoming / LIVE</span>
+                <span class="text-[10px] text-on-surface-variant uppercase tracking-widest">ID: WS-042</span>
+              </div>
+              <h3 class="text-3xl font-bold font-headline uppercase leading-none mb-4 group-hover:text-primary transition-colors">Hiring Your First Employee</h3>
+              <div class="flex items-center gap-4 text-on-surface-variant text-sm mb-6">
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Nov 05, 2024</div>
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 150 MIN</div>
+              </div>
+            </div>
+            <button class="w-full bg-primary text-on-primary py-4 font-bold uppercase tracking-[0.1em] hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+              Register <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Marketing Without The BS -->
+        <div class="group relative flex flex-col md:flex-row bg-surface-container-low border-l-4 border-outline-variant/30 overflow-hidden">
+          <div class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
+            <img alt="Marketing Without The BS workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADC7FxmtU1qkyrQuFxV3n3sAQv49jQXXGck50kr19wUCekXyUhYxFCYg63gkEkEHbShqetOIEZzuI1ZiaRurOCOX5UcAin9hx8vBQHR-zW2y2lRKO0GO0AS0ZB88-r0vG65tbg_rl5TDpJR89W8cx2zVn-_R9wYrJFEX5xsFf-a9u-AARU6CjLY_cWpJnFyrN_woVwMTs1Ovw5ycc8GkAMkb8Yifg6ioBXrwTfGlY4PpfjTtF8gptYajtMZxX3JDgtoSvfdCixcYQN"/>
+          </div>
+          <div class="flex-1 p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] text-on-surface-variant font-bold tracking-[0.2em] uppercase">Recorded / ARCHIVE</span>
+                <span class="text-[10px] text-on-surface-variant uppercase tracking-widest">ID: WS-035</span>
+              </div>
+              <h3 class="text-3xl font-bold font-headline uppercase leading-none mb-4 group-hover:text-primary transition-colors">Marketing Without The BS</h3>
+              <div class="flex items-center gap-4 text-on-surface-variant text-sm mb-6">
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">history</span> Available Now</div>
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 75 MIN</div>
+              </div>
+            </div>
+            <button class="w-full bg-surface-container-high text-on-surface py-4 font-bold uppercase tracking-[0.1em] hover:bg-surface-container-highest border border-outline-variant/30 transition-all flex items-center justify-center gap-2">
+              Watch Recording <span class="material-symbols-outlined text-sm">play_circle</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: Financial Fundamentals -->
+        <div class="group relative flex flex-col md:flex-row bg-surface-container-low border-l-4 border-outline-variant/30 overflow-hidden">
+          <div class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
+            <img alt="Financial Fundamentals workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHykDOSeL8ys6cj0nvOcS9vJFJLoabDFTHDP485NQhMmIH-om1A9_ju3mzhh0AGN6LY48JDh84jAzpnVgkXgOqcEw6Z97VkmSVxvdfN9sRMZm89gPgVjA5weHOpX0cPwLHlhYZNi2Q_yqUG96G_tfLe8YJ8TlOToK6TirevaWwn1HZHlAZirX3Ft2bnP5LJxT5P5u7LnIy9k_DxCsvZ4RXFeiPSryh1UiQ7VmT1AnYWCJdQwDVJIagbDwdPQWpa93VLJZn9_LdThn8"/>
+          </div>
+          <div class="flex-1 p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] text-on-surface-variant font-bold tracking-[0.2em] uppercase">Recorded / ARCHIVE</span>
+                <span class="text-[10px] text-on-surface-variant uppercase tracking-widest">ID: WS-032</span>
+              </div>
+              <h3 class="text-3xl font-bold font-headline uppercase leading-none mb-4 group-hover:text-primary transition-colors">Financial Fundamentals</h3>
+              <div class="flex items-center gap-4 text-on-surface-variant text-sm mb-6">
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">history</span> Available Now</div>
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 110 MIN</div>
+              </div>
+            </div>
+            <button class="w-full bg-surface-container-high text-on-surface py-4 font-bold uppercase tracking-[0.1em] hover:bg-surface-container-highest border border-outline-variant/30 transition-all flex items-center justify-center gap-2">
+              Watch Recording <span class="material-symbols-outlined text-sm">play_circle</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6: Scaling From Solo to Crew -->
+        <div class="group relative flex flex-col md:flex-row bg-surface-container-low border-l-4 border-primary overflow-hidden">
+          <div class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
+            <img alt="Scaling From Solo to Crew workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUYLRzFqz-LiUxqhiYdLWj6YUJ0yIJhGScIN4rknrq9yUQKPsKLFvOgSICncOCvDwPmC6OuN5tJn2hx7kbqTrzctAtwN3Q-ncC7mckL6vt2f8iSAU8r0qR7ZM9IIIclf5oGiPMQesZkKA7yCd5g6vdhrO7EgAR9wWeJ_DS1y1TJRXy-cY3meho17fes6gySkLvMtEh3jwf58kIZrG1Hk38ucbqBEbHaF2HDem7-Ll7LxzjkCmGTUbhG3MO7GvKQKLif6E-o2X4KEAE"/>
+          </div>
+          <div class="flex-1 p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] text-primary font-bold tracking-[0.2em] uppercase">Upcoming / LIVE</span>
+                <span class="text-[10px] text-on-surface-variant uppercase tracking-widest">ID: WS-045</span>
+              </div>
+              <h3 class="text-3xl font-bold font-headline uppercase leading-none mb-4 group-hover:text-primary transition-colors">Scaling From Solo to Crew</h3>
+              <div class="flex items-center gap-4 text-on-surface-variant text-sm mb-6">
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Dec 18, 2024</div>
+                <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 180 MIN</div>
+              </div>
+            </div>
+            <button class="w-full bg-primary text-on-primary py-4 font-bold uppercase tracking-[0.1em] hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+              Register <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / CTA -->
+  <section class="bg-surface-container-lowest px-8 py-24 mt-20 border-t border-outline-variant/20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold font-headline uppercase tracking-tighter mb-6">Stay In The Loop</h2>
+      <p class="text-on-surface-variant mb-10 max-w-xl mx-auto uppercase text-xs tracking-[0.2em]">Get notified about new technical sessions and operational blueprints as they are released.</p>
+      <form data-form="newsletter" name="newsletter" method="POST" data-netlify="true" class="flex flex-col md:flex-row gap-0 border-2 border-outline-variant/30">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <input class="flex-1 bg-transparent border-none text-white px-6 py-4 focus:ring-0 focus:border-primary font-label text-sm uppercase tracking-widest placeholder:text-white/20" placeholder="ENTER DISPATCH EMAIL..." type="email" name="email"/>
+        <button type="submit" class="bg-primary text-on-primary px-10 py-4 font-bold uppercase tracking-widest hover:bg-primary-container transition-colors">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+    <div class="col-span-1 md:col-span-1">
+      <div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+      <p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">The premier industrial community for tradesmen and contractors committed to excellence.</p>
+    </div>
+    <div>
+      <h4 class="text-[#D4A017] mb-4 font-bold">Resources</h4>
+      <ul class="space-y-2">
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="blog.html">Blog</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="events.html">Events</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="shop.html">Shop</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[#D4A017] mb-4 font-bold">Legal</h4>
+      <ul class="space-y-2">
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Privacy</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Terms</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[#D4A017] mb-4 font-bold">Connect</h4>
+      <ul class="space-y-2">
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="contact.html">Contact</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+    &copy; 2026 THE LONG SLOW GRIND. BUILT TO LAST.
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

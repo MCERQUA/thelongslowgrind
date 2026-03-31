@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tools &amp; Resources | THE LONG SLOW GRIND</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "tertiary-fixed": "#d6e3ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#003d7a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#5c4300",
+                        "surface-tint": "#f6be39",
+                        "secondary-fixed": "#ffdfa0",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#00468b",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#cfb177",
+                        "on-surface-variant": "#d3c5ae",
+                        "tertiary-container": "#72a9ff",
+                        "on-secondary-fixed-variant": "#584414",
+                        "on-primary-container": "#503a00",
+                        "surface-container": "#20201f",
+                        "secondary-fixed-dim": "#e1c387",
+                        "tertiary-fixed-dim": "#a9c7ff",
+                        "primary-container": "#d4a017",
+                        "secondary": "#e1c387",
+                        "outline": "#9b8f7a",
+                        "outline-variant": "#4f4634",
+                        "primary-fixed-dim": "#f6be39",
+                        "on-primary": "#402d00",
+                        "surface-container-highest": "#353535",
+                        "on-secondary": "#402d00",
+                        "on-primary-fixed": "#261a00",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-tertiary": "#003062",
+                        "tertiary": "#a9c7ff",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-container": "#584414",
+                        "primary-fixed": "#ffdfa0",
+                        "surface-variant": "#353535",
+                        "on-background": "#e5e2e1",
+                        "inverse-primary": "#795900",
+                        "primary": "#f6be39"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            background-image: radial-gradient(rgba(246, 190, 57, 0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .blueprint-grid {
+            background-image: linear-gradient(#f6be3908 1px, transparent 1px), linear-gradient(90deg, #f6be3908 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-xl border-b border-[#f6be39]/15 flex justify-between items-center px-6 h-20 transition-all duration-150 ease-linear">
+        <a href="index.html" class="text-2xl font-black text-[#f6be39] tracking-tighter font-headline">THE LONG SLOW GRIND</a>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="index.html">Home</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="about.html">About</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="community.html">Community</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="mentorship.html">Mentorship</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="workshops.html">Workshops</a>
+            <a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="resources.html">Resources</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="blog.html">Blog</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="events.html">Events</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="shop.html">Shop</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                JOIN THE GRIND
+            </button>
+            <!-- Mobile menu toggle -->
+            <button id="menu-toggle" class="md:hidden text-[#f6be39]">
+                <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+                <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#131313]/95 backdrop-blur-xl pt-24 px-6 overflow-y-auto">
+        <div class="flex flex-col space-y-6">
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="index.html">Home</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="about.html">About</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="community.html">Community</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="mentorship.html">Mentorship</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="workshops.html">Workshops</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-[#f6be39]" href="resources.html">Resources</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="blog.html">Blog</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="events.html">Events</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="shop.html">Shop</a>
+            <div class="pt-6 border-t border-[#f6be39]/15">
+                <button class="w-full bg-primary text-on-primary px-6 py-4 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                    JOIN THE GRIND
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 blueprint-grid -z-10 opacity-40"></div>
+        <div class="max-w-7xl mx-auto flex flex-col items-start">
+            <div class="bg-primary px-3 py-1 mb-6">
+                <span class="text-[10px] font-black tracking-[0.2em] text-on-primary uppercase">System v4.02</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-on-surface leading-[0.9] mb-6 uppercase max-w-4xl">
+                YOUR BUSINESS <br /><span class="text-primary">TOOLKIT</span>
+            </h1>
+            <p class="text-xl text-on-surface-variant max-w-2xl font-medium leading-relaxed border-l-4 border-primary pl-6">
+                Field-tested frameworks and precision instruments for the modern contractor. Built to withstand the pressure of the job site.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <main class="max-w-7xl mx-auto px-6 pb-24 flex flex-col md:flex-row gap-12">
+
+        <!-- Left Sidebar -->
+        <aside class="w-full md:w-64 flex-shrink-0">
+            <div class="sticky top-28 bg-[#131313] flex flex-col p-4 space-y-2">
+                <div class="mb-6 px-4">
+                    <p class="font-['Space_Grotesk'] font-bold uppercase tracking-widest text-[10px] text-white/40">CATEGORIES</p>
+                    <p class="font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-[#f6be39]">FILTER BY TYPE</p>
+                </div>
+                <a class="flex items-center gap-3 p-3 font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs transition-all duration-75 scale-95 bg-[#f6be39] text-[#131313]" href="#">
+                    <span class="material-symbols-outlined text-lg">grid_view</span>
+                    Pricing Tools
+                </a>
+                <a class="flex items-center gap-3 p-3 font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-white/60 hover:bg-[#1c1c1c] hover:text-white transition-all duration-75" href="#">
+                    <span class="material-symbols-outlined text-lg">engineering</span>
+                    SOP Templates
+                </a>
+                <a class="flex items-center gap-3 p-3 font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-white/60 hover:bg-[#1c1c1c] hover:text-white transition-all duration-75" href="#">
+                    <span class="material-symbols-outlined text-lg">construction</span>
+                    Checklists
+                </a>
+                <a class="flex items-center gap-3 p-3 font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-white/60 hover:bg-[#1c1c1c] hover:text-white transition-all duration-75" href="#">
+                    <span class="material-symbols-outlined text-lg">terminal</span>
+                    Guides
+                </a>
+                <a class="flex items-center gap-3 p-3 font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-white/60 hover:bg-[#1c1c1c] hover:text-white transition-all duration-75" href="#">
+                    <span class="material-symbols-outlined text-lg">payments</span>
+                    Calculators
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="flex-grow">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#f6be39]/10">
+
+                <!-- Card 1 -->
+                <div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">calculate</span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-primary border border-primary px-2 py-0.5">Free</span>
+                    </div>
+                    <h3 class="text-2xl font-black tracking-tight mb-2 uppercase">Job Pricing Calculator</h3>
+                    <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Precision tool for calculating labor, materials, and overhead for complex job-site bids.</p>
+                    <button class="w-full bg-surface-container-high border border-outline-variant py-4 text-xs font-black tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+                        Use Tool <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">description</span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-primary border border-primary px-2 py-0.5">Free</span>
+                    </div>
+                    <h3 class="text-2xl font-black tracking-tight mb-2 uppercase">Estimate Template</h3>
+                    <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Professional, customer-facing estimate PDF template optimized for high conversion rates.</p>
+                    <button class="w-full bg-surface-container-high border border-outline-variant py-4 text-xs font-black tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+                        Download <span class="material-symbols-outlined text-sm">download</span>
+                    </button>
+                </div>
+
+                <!-- Card 3 (Members Only) -->
+                <div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4">
+                        <span class="material-symbols-outlined text-white/20 text-6xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">assignment_turned_in</span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-white/40 border border-white/20 px-2 py-0.5">Members Only</span>
+                    </div>
+                    <h3 class="text-2xl font-black tracking-tight mb-2 uppercase">Onboarding Checklist</h3>
+                    <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">A comprehensive 40-point checklist to bring new hires up to speed in under 5 days.</p>
+                    <button class="w-full bg-surface-container-highest border border-outline-variant py-4 text-xs font-black tracking-widest uppercase flex items-center justify-center gap-2 opacity-50 cursor-not-allowed">
+                        <span class="material-symbols-outlined text-sm">lock</span> Locked
+                    </button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">local_shipping</span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-primary border border-primary px-2 py-0.5">Free</span>
+                    </div>
+                    <h3 class="text-2xl font-black tracking-tight mb-2 uppercase">Vehicle Wrap ROI</h3>
+                    <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Calculate the break-even point for your fleet branding based on local impression data.</p>
+                    <button class="w-full bg-surface-container-high border border-outline-variant py-4 text-xs font-black tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+                        Use Tool <span class="material-symbols-outlined text-sm">bolt</span>
+                    </button>
+                </div>
+
+                <!-- Card 5 (Members Only) -->
+                <div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4">
+                        <span class="material-symbols-outlined text-white/20 text-6xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">chat</span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-white/40 border border-white/20 px-2 py-0.5">Members Only</span>
+                    </div>
+                    <h3 class="text-2xl font-black tracking-tight mb-2 uppercase">Follow-Up Script</h3>
+                    <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Psychology-backed phone scripts to close stalled estimates and win back old leads.</p>
+                    <button class="w-full bg-surface-container-highest border border-outline-variant py-4 text-xs font-black tracking-widest uppercase flex items-center justify-center gap-2 opacity-50 cursor-not-allowed">
+                        <span class="material-symbols-outlined text-sm">lock</span> Locked
+                    </button>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">article</span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-primary border border-primary px-2 py-0.5">Free</span>
+                    </div>
+                    <h3 class="text-2xl font-black tracking-tight mb-2 uppercase">Scope of Work Template</h3>
+                    <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Prevent scope creep with this ironclad agreement framework for any renovation project.</p>
+                    <button class="w-full bg-surface-container-high border border-outline-variant py-4 text-xs font-black tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+                        Download <span class="material-symbols-outlined text-sm">download</span>
+                    </button>
+                </div>
+
+                <!-- Card 7 (Members Only) -->
+                <div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4">
+                        <span class="material-symbols-outlined text-white/20 text-6xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">monitoring</span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-white/40 border border-white/20 px-2 py-0.5">Members Only</span>
+                    </div>
+                    <h3 class="text-2xl font-black tracking-tight mb-2 uppercase">Cash Flow Tracker</h3>
+                    <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Dynamic spreadsheet tool to manage payroll and vendor payments against receivables.</p>
+                    <button class="w-full bg-surface-container-highest border border-outline-variant py-4 text-xs font-black tracking-widest uppercase flex items-center justify-center gap-2 opacity-50 cursor-not-allowed">
+                        <span class="material-symbols-outlined text-sm">lock</span> Locked
+                    </button>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">account_balance_wallet</span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-primary border border-primary px-2 py-0.5">Free</span>
+                    </div>
+                    <h3 class="text-2xl font-black tracking-tight mb-2 uppercase">Marketing Planner</h3>
+                    <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Allocate your quarterly marketing spend across digital and traditional channels.</p>
+                    <button class="w-full bg-surface-container-high border border-outline-variant py-4 text-xs font-black tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+                        Download <span class="material-symbols-outlined text-sm">download</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+            <div class="col-span-1 md:col-span-1">
+                <div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+                <p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">The premier industrial community for tradesmen and contractors committed to excellence.</p>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Resources</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="blog.html">Blog</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="events.html">Events</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Privacy</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Connect</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="contact.html">Contact</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+            &copy; 2026 THE LONG SLOW GRIND. BUILT TO LAST.
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

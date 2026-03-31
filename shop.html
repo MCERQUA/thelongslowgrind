@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shop | THE LONG SLOW GRIND</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "tertiary-fixed-dim": "#a9c7ff",
+          "surface-variant": "#353535",
+          "surface-dim": "#131313",
+          "surface-container": "#20201f",
+          "outline-variant": "#4f4634",
+          "surface-container-lowest": "#0e0e0e",
+          "tertiary-fixed": "#d6e3ff",
+          "on-tertiary": "#003062",
+          "on-background": "#e5e2e1",
+          "surface-tint": "#f6be39",
+          "background": "#131313",
+          "surface-container-highest": "#353535",
+          "tertiary-container": "#72a9ff",
+          "outline": "#9b8f7a",
+          "secondary-container": "#584414",
+          "inverse-on-surface": "#313030",
+          "on-error-container": "#ffdad6",
+          "on-secondary-fixed-variant": "#584414",
+          "on-tertiary-fixed": "#001b3d",
+          "on-tertiary-fixed-variant": "#00468b",
+          "on-primary-fixed-variant": "#5c4300",
+          "on-secondary-fixed": "#261a00",
+          "error": "#ffb4ab",
+          "primary": "#f6be39",
+          "surface": "#131313",
+          "on-primary-container": "#503a00",
+          "on-surface": "#e5e2e1",
+          "primary-container": "#d4a017",
+          "inverse-primary": "#795900",
+          "surface-container-high": "#2a2a2a",
+          "inverse-surface": "#e5e2e1",
+          "tertiary": "#a9c7ff",
+          "on-primary-fixed": "#261a00",
+          "on-secondary": "#402d00",
+          "on-error": "#690005",
+          "secondary-fixed": "#ffdfa0",
+          "secondary-fixed-dim": "#e1c387",
+          "surface-container-low": "#1c1b1b",
+          "surface-bright": "#393939",
+          "primary-fixed-dim": "#f6be39",
+          "on-primary": "#402d00",
+          "primary-fixed": "#ffdfa0",
+          "on-secondary-container": "#cfb177",
+          "error-container": "#93000a",
+          "on-tertiary-container": "#003d7a",
+          "secondary": "#e1c387",
+          "on-surface-variant": "#d3c5ae"
+        },
+        fontFamily: {
+          "headline": ["Space Grotesk"],
+          "body": ["Space Grotesk"],
+          "label": ["Space Grotesk"]
+        },
+        borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+      },
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: #131313;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #e5e2e1;
+  }
+  .grainy-overlay {
+    position: relative;
+  }
+  .grainy-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .industrial-gradient {
+    background: linear-gradient(135deg, #f6be39 0%, #d4a017 100%);
+  }
+  .industrial-grid {
+    background-image: radial-gradient(rgba(212, 160, 23, 0.1) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
+</head>
+<body class="grainy-overlay">
+
+<!-- TopNavBar -->
+<nav class="bg-[#131313]/80 backdrop-blur-md text-[#D4A017] font-['Space_Grotesk'] font-bold uppercase tracking-wider fixed top-0 z-50 border-b border-[#f6be39]/15 flex justify-between items-center w-full px-6 py-4">
+  <div class="text-2xl font-black text-[#f6be39] tracking-tighter">
+    <a href="index.html">THE LONG SLOW GRIND</a>
+  </div>
+  <div class="hidden md:flex items-center space-x-8">
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="index.html">Home</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="about.html">About</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="community.html">Community</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="mentorship.html">Mentorship</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="workshops.html">Workshops</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="resources.html">Resources</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="blog.html">Blog</a>
+    <a class="text-white/70 hover:text-white transition-colors duration-200" href="events.html">Events</a>
+    <a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="shop.html">Shop</a>
+  </div>
+  <div class="flex items-center space-x-6">
+    <div class="hidden lg:flex items-center space-x-4">
+      <a href="shop.html"><span class="material-symbols-outlined cursor-pointer hover:text-white">shopping_cart</span></a>
+      <span class="material-symbols-outlined cursor-pointer hover:text-white">account_circle</span>
+    </div>
+    <button class="hidden md:block bg-[#f6be39] text-[#131313] px-6 py-2 text-sm font-black hover:bg-white transition-colors duration-200">JOIN THE GRIND</button>
+    <!-- Mobile Hamburger -->
+    <button id="menu-toggle" class="md:hidden p-2 text-[#f6be39]">
+      <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+      <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#131313]/98 pt-24 px-8 flex flex-col space-y-6 text-center">
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="index.html">Home</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="about.html">About</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="community.html">Community</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="mentorship.html">Mentorship</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="workshops.html">Workshops</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="resources.html">Resources</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="blog.html">Blog</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="events.html">Events</a>
+  <a class="text-xl font-bold uppercase tracking-wider text-[#f6be39]" href="shop.html">Shop</a>
+  <div class="pt-6">
+    <button class="bg-[#f6be39] text-[#131313] px-8 py-3 text-sm font-black uppercase tracking-wider hover:bg-white transition-colors">JOIN THE GRIND</button>
+  </div>
+</div>
+
+<main class="pt-20">
+
+  <!-- Hero Section -->
+  <header class="relative w-full py-20 md:py-32 bg-surface-container-lowest overflow-hidden border-b border-outline-variant/20">
+    <div class="absolute inset-0 industrial-grid opacity-30"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+    <div class="container mx-auto px-8 relative z-10 flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        <span class="inline-block bg-primary text-on-primary px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">Built To Last</span>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold font-headline uppercase leading-none tracking-tighter mb-4 text-on-surface">
+          Wear The <br/><span class="text-primary italic">Grind</span>
+        </h1>
+        <p class="text-lg text-on-surface-variant max-w-md font-body tracking-wide">
+          Gear built for people who build things. High-performance apparel designed for the industrial athlete and the daily laborer.
+        </p>
+      </div>
+      <div class="md:w-1/2 flex justify-end">
+        <div class="relative w-full aspect-square max-w-md bg-surface-container-high overflow-hidden border-l border-t border-primary/20">
+          <img alt="Industrial worker gear on weathered steel workbench" class="w-full h-full object-cover mix-blend-luminosity grayscale opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzFatzP2IrE8jZdqOmDH96GyWb_-SQjD3uA8Szm_L1oiUKkYkeMDSygwVQ5h6i9iXD7YkteovuEYzivr2EKULrz-vlXEnYPeOK-6e5JAlWlBJ07K-KXqwZjF2_G9IJS8eWNDp3GhX-_baR3KqxSlfZfWqOO9Tgn-LVosDR0wp9mBKbVBdWlK4zuznuYwai1lzYKaKW3QmuLRAdVlHt__OH-w-fE-tiUN1qoJ_mflD_zQF2e0PMcdDZNUuHeohqrGm6O4ps5Nr3q0oX"/>
+          <div class="absolute bottom-4 left-4 flex gap-2">
+            <div class="w-12 h-[2px] bg-primary"></div>
+            <div class="w-4 h-[2px] bg-primary opacity-50"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Workspace -->
+  <section class="container mx-auto px-8 py-16 flex flex-col lg:flex-row gap-12">
+
+    <!-- Sidebar Filters -->
+    <aside class="w-full lg:w-64 shrink-0">
+      <div class="lg:sticky lg:top-32">
+        <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-8 border-b border-primary/20 pb-2">Filter Catalog</h3>
+        <ul class="space-y-4 font-label">
+          <li>
+            <button class="w-full text-left flex items-center justify-between group">
+              <span class="text-lg font-bold uppercase tracking-widest text-on-surface group-hover:text-primary transition-colors">Hats</span>
+              <span class="text-[10px] text-outline opacity-50">[08]</span>
+            </button>
+          </li>
+          <li>
+            <button class="w-full text-left flex items-center justify-between group">
+              <span class="text-lg font-bold uppercase tracking-widest text-on-surface group-hover:text-primary transition-colors">Shirts</span>
+              <span class="text-[10px] text-outline opacity-50">[12]</span>
+            </button>
+          </li>
+          <li>
+            <button class="w-full text-left flex items-center justify-between group border-l-2 border-primary pl-4">
+              <span class="text-lg font-bold uppercase tracking-widest text-primary">Hoodies</span>
+              <span class="text-[10px] text-primary opacity-50">[05]</span>
+            </button>
+          </li>
+          <li>
+            <button class="w-full text-left flex items-center justify-between group">
+              <span class="text-lg font-bold uppercase tracking-widest text-on-surface group-hover:text-primary transition-colors">Accessories</span>
+              <span class="text-[10px] text-outline opacity-50">[14]</span>
+            </button>
+          </li>
+        </ul>
+        <div class="mt-16 p-6 bg-surface-container-low border-l border-primary">
+          <h4 class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Member Blueprint</h4>
+          <p class="text-xs text-outline leading-relaxed mb-4">Get 15% off your first order when you join the coaching platform.</p>
+          <a class="text-[10px] font-bold uppercase tracking-widest text-primary hover:underline" href="#">Join Now &rarr;</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Product Grid -->
+    <div class="flex-1">
+      <div class="flex flex-col sm:flex-row justify-between items-end mb-12 border-b border-outline-variant/10 pb-6 gap-4">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-outline mb-1">Stock Availability</h2>
+          <p class="text-3xl font-bold uppercase tracking-tighter">Current Inventory</p>
+        </div>
+        <div class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline-variant">
+          Showing 1-6 of 39 items
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0">
+
+        <!-- Product 1: The Grind Snapback -->
+        <div class="group bg-surface-container-low border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+          <div class="aspect-square relative overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" alt="Premium black structured snapback hat with gold industrial logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkq7iFxEWeyIrNSAWIhHag9cjvp-eSbzuUaAdkfnWL1WarkVaBCQiQVe2otFHgw2peLv_3bBnT0dEUDFyyV6FCI8Rv3GPNu1JszKuR51pOTjO1lR1dfmidtuqSP46os35U1K7f-sj9TypC86bdbcwI3v-eAJ13Ws-ycYE9Yrb0vz2e3_SbYciYDtjC0hUfDBa7KB6VCHrRCv8l37paq5tJ8jJE-6fz-Iwet08UY25bf50bE-0ePN9TXzQVJYhXbArHG0tHnubFgGE-"/>
+            <span class="absolute top-4 left-4 bg-primary text-on-primary text-[10px] px-2 py-1 font-black uppercase tracking-widest">New Arrival</span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">The Grind Snapback Hat</h3>
+              <p class="text-primary font-bold text-lg leading-tight">$35</p>
+            </div>
+            <p class="text-xs text-outline mb-6 flex-1">Black/Gold logo. Rigid construction for a lasting silhouette.</p>
+            <button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+            </button>
+          </div>
+          <div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <!-- Product 2: No Shortcuts Hoodie -->
+        <div class="group bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+          <div class="aspect-square relative overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" alt="Charcoal grey heavy-weight cotton hoodie on concrete surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnLCYy85v850C3uG3eMv9qqPwP9HPSjewwK3jAlquplK2T2yXtuVQ94CxhK2XQ1CRGOr1ZemMK1CnEOutkD1Fj1N1tdhMZ8NLPEIbZKYuJf_hcnRBKEUuC4GR4awNsgx8cG9tc53tbAqXT-M9rJbGWkdJQ0EKpGhG0lzgPGcMJNN0mAHFPK4-R9h5-xLBhJkWUPg6VPFUNh9BpgDYEwIjoT7G0aZrl0JkwmJDO6pxdwXce_94sIya_P6QNPveN1SvN9nMUe8dKEruO"/>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">No Shortcuts Hoodie</h3>
+              <p class="text-primary font-bold text-lg leading-tight">$65</p>
+            </div>
+            <p class="text-xs text-outline mb-6 flex-1">Charcoal heavyweight fleece. Built for cold morning site visits.</p>
+            <button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+            </button>
+          </div>
+          <div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <!-- Product 3: Systems Over Hustle Tee -->
+        <div class="group bg-surface-container-low border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+          <div class="aspect-square relative overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" alt="Black premium cotton t-shirt with gold Systems Over Hustle typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgflCKmXN7SdGRjIDg97p0pBGcGn9mxnGT8aTxg1YKLj2qsv9jS8bMnRs_ijzbb-0YEwxBUWP9I2bugZY1uOyitbTXaK4DY6BWNmuhmPvY-ycB4V3tsfZK5dh4-O0EORPWUp1e0pcQ_VCZLZK0K-BoCxWD5v1wfgvyvvfPKA-fPrnL3WVBAstiElC8ApBJl1rwiSjLzn6O4W6MBMRrdHu7JD6_wPLtObv_vd_93JXAqUbeuo5r--PnO24kuBaBIyofzoBen7VLmCco"/>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">Systems Over Hustle Tee</h3>
+              <p class="text-primary font-bold text-lg leading-tight">$30</p>
+            </div>
+            <p class="text-xs text-outline mb-6 flex-1">Black 100% cotton. Tailored fit with reinforced stitching.</p>
+            <button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+            </button>
+          </div>
+          <div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <!-- Product 4: The Daily Grind Coffee Mug -->
+        <div class="group bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+          <div class="aspect-square relative overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" alt="Matte black ceramic mug with laser-etched gold logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZI6ikdIdCzQdyLDdk2jBF14NgIryLawmBO1rNQZrQzi8y7vYStKYFvwigXh3hQtWZAalKeBDsTIjYb6qc39Rf2iym6dvbSzGZxHiiuK-nLoE667gbNojDH4IRmBYsjpnhotVTfNH5EGaWexVHwvq4dOngTvRjA43xx-5izSKgZlOBmu0-hIiWrwA5i82XhUMS35piLbYqErZLFqM989HnAR6gxZNeCrTmtwvHL9z2zrGYBoQfTHQcHuYXkJRl4SjJIidXgG7hygbJ"/>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">The Daily Grind Coffee Mug</h3>
+              <p class="text-primary font-bold text-lg leading-tight">$20</p>
+            </div>
+            <p class="text-xs text-outline mb-6 flex-1">15oz matte black ceramic. Oversized handle for work gloves.</p>
+            <button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+            </button>
+          </div>
+          <div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <!-- Product 5: Hard Hat Sticker Pack -->
+        <div class="group bg-surface-container-low border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+          <div class="aspect-square relative overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" alt="Industrial-style vinyl stickers with gold and black designs on a blueprint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ4AcgyV_rKeQmPOSC7tD6jjULlrr2Vlq3mcsfxkjKXsbr5M7jLBjAvyaNcnhytqMiyLM8Qr5Xgu5IgtEGe6-VI8hOZ7WusiC7B6iudAB6x_Xkt4wyvc8Sjv-XmUKit2zn3--v-CdHe2f7vK7_mYoEe1DbbYK-NKZs8TsGhjisNaI3gnM7A1EpKkAYlw7nwCEiu2R7ozmDeJIgK1-WMgkFpgfx4tcOK_wVSDydkgDB81b8a44Ub7VenOiTFY5AZ3kMk2qpyr2ovX_n"/>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">Hard Hat Sticker Pack</h3>
+              <p class="text-primary font-bold text-lg leading-tight">$12</p>
+            </div>
+            <p class="text-xs text-outline mb-6 flex-1">Set of 10 weather-resistant vinyl stickers. Built for the site.</p>
+            <button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+            </button>
+          </div>
+          <div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <!-- Product 6: Long Slow Grind Work Jacket -->
+        <div class="group bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-all duration-300 relative flex flex-col">
+          <div class="aspect-square relative overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 scale-100 group-hover:scale-105" alt="Premium brown canvas work jacket with brass zippers and gold logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKkjVNQT61ly7Th85OOTijAAcG4J_ds5tb_1BUQHrj5JuuMyOREwprxfBj-gpS-XMJZ4jpTY6300A3NQdbshDIild-o4hQRVtuIphJ_Dv8jfDZ-aKEIC8L5ygHNwavuQP33yu2ghTME_OIcKlpiUY_WAYjPKnhscH13oFsax1Nu9D-tZINAnpJQZNGd3gJ7mii64qJfiwbsxIvw2zN1dpE_HsD1ibu860AXCVkIKBRx13nQ9bLCkX9akUseQHOOeHlMBc5s3f0pQoh"/>
+            <span class="absolute top-4 right-4 bg-on-surface text-surface text-[10px] px-2 py-1 font-black uppercase tracking-widest">Premium Tier</span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-bold text-lg uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">Long Slow Grind Work Jacket</h3>
+              <p class="text-primary font-bold text-lg leading-tight">$120</p>
+            </div>
+            <p class="text-xs text-outline mb-6 flex-1">Heavy Canvas Brown. Triple-stitched seams and thermal lining.</p>
+            <button class="w-full bg-primary text-on-primary font-bold uppercase py-4 text-xs tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+            </button>
+          </div>
+          <div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+      </div>
+
+      <!-- Load More / Pagination -->
+      <div class="mt-16 flex flex-col items-center">
+        <div class="w-full h-2 flex gap-1 mb-6">
+          <div class="h-full flex-1 bg-primary"></div>
+          <div class="h-full flex-1 bg-primary"></div>
+          <div class="h-full flex-1 bg-primary"></div>
+          <div class="h-full flex-1 bg-surface-container-highest"></div>
+          <div class="h-full flex-1 bg-surface-container-highest"></div>
+        </div>
+        <button class="px-12 py-4 border border-outline-variant text-[10px] font-bold uppercase tracking-[0.4em] text-on-surface hover:bg-white/5 transition-colors">
+          Expand Inventory
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Slab -->
+  <section class="bg-surface-container-highest py-20 border-t border-outline-variant/30">
+    <div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-bold uppercase tracking-tighter mb-4 leading-tight">Join the blueprint <br/>correspondence</h2>
+        <p class="text-outline max-w-md">Technical updates, early drop access, and the methodology of the grind delivered to your terminal weekly.</p>
+      </div>
+      <form data-form="newsletter" name="newsletter" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-0 border-l border-primary pl-0 sm:pl-8">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <input class="flex-1 bg-surface-container border-none p-6 font-label text-sm uppercase tracking-widest focus:ring-1 focus:ring-primary" placeholder="ENTER TERMINAL EMAIL" type="email" name="email" required/>
+        <button type="submit" class="bg-primary text-on-primary font-black uppercase px-10 py-6 text-sm tracking-widest hover:bg-primary-container transition-colors">Register</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+    <div class="col-span-1 md:col-span-1">
+      <div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+      <p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">The premier industrial community for tradesmen and contractors committed to excellence.</p>
+    </div>
+    <div>
+      <h4 class="text-[#D4A017] mb-4 font-bold">Resources</h4>
+      <ul class="space-y-2">
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="blog.html">Blog</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="events.html">Events</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="shop.html">Shop</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[#D4A017] mb-4 font-bold">Legal</h4>
+      <ul class="space-y-2">
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Privacy</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Terms</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[#D4A017] mb-4 font-bold">Connect</h4>
+      <ul class="space-y-2">
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="contact.html">Contact</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+        <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+    &copy; 2026 THE LONG SLOW GRIND. BUILT TO LAST.
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

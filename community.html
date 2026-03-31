@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community &amp; Membership | THE LONG SLOW GRIND</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "surface-bright": "#393939",
+                    "on-primary-container": "#503a00",
+                    "on-tertiary": "#003062",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-fixed-variant": "#00468b",
+                    "secondary-fixed-dim": "#e1c387",
+                    "surface-container-high": "#2a2a2a",
+                    "surface": "#131313",
+                    "surface-container-highest": "#353535",
+                    "tertiary-container": "#72a9ff",
+                    "inverse-primary": "#795900",
+                    "primary-fixed": "#ffdfa0",
+                    "on-secondary-fixed-variant": "#584414",
+                    "primary": "#f6be39",
+                    "on-background": "#e5e2e1",
+                    "surface-variant": "#353535",
+                    "surface-container": "#20201f",
+                    "surface-dim": "#131313",
+                    "on-tertiary-fixed": "#001b3d",
+                    "on-error": "#690005",
+                    "on-surface-variant": "#d3c5ae",
+                    "inverse-surface": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "secondary-fixed": "#ffdfa0",
+                    "on-tertiary-container": "#003d7a",
+                    "on-primary-fixed-variant": "#5c4300",
+                    "surface-container-low": "#1c1b1b",
+                    "outline-variant": "#4f4634",
+                    "tertiary-fixed": "#d6e3ff",
+                    "primary-fixed-dim": "#f6be39",
+                    "on-secondary": "#402d00",
+                    "surface-tint": "#f6be39",
+                    "error-container": "#93000a",
+                    "outline": "#9b8f7a",
+                    "on-primary": "#402d00",
+                    "secondary-container": "#584414",
+                    "on-secondary-container": "#cfb177",
+                    "tertiary-fixed-dim": "#a9c7ff",
+                    "on-error-container": "#ffdad6",
+                    "background": "#131313",
+                    "primary-container": "#d4a017",
+                    "on-surface": "#e5e2e1",
+                    "secondary": "#e1c387",
+                    "tertiary": "#a9c7ff",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-primary-fixed": "#261a00",
+                    "on-secondary-fixed": "#261a00"
+                },
+                fontFamily: {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Space Grotesk"],
+                    "label": ["Space Grotesk"]
+                },
+                borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+            },
+        },
+    }
+</script>
+<style>
+    body { font-family: 'Space Grotesk', sans-serif; background-color: #131313; color: #e5e2e1; }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .blueprint-grid {
+        background-image: linear-gradient(#D4A017 1px, transparent 1px), linear-gradient(90deg, #D4A017 1px, transparent 1px);
+        background-size: 40px 40px;
+        opacity: 0.05;
+    }
+    .grain-texture {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+    }
+</style>
+</head>
+<body class="bg-background selection:bg-primary selection:text-on-primary">
+<div class="grain-texture fixed inset-0 z-[100]"></div>
+
+<!-- Nav -->
+<nav class="bg-[#131313]/80 backdrop-blur-md text-[#f6be39] font-['Space_Grotesk'] font-bold uppercase tracking-wider fixed top-0 z-50 border-b border-[#f6be39]/15 w-full">
+    <div class="flex justify-between items-center w-full px-6 py-4 mx-auto">
+        <a href="index.html" class="text-2xl font-black text-[#f6be39] tracking-tighter">THE LONG SLOW GRIND</a>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="index.html">Home</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="about.html">About</a>
+            <a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="community.html">Community</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="mentorship.html">Mentorship</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="workshops.html">Workshops</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="resources.html">Resources</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="blog.html">Blog</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="events.html">Events</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="shop.html">Shop</a>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="hidden lg:flex gap-4">
+                <a href="shop.html"><span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">shopping_cart</span></a>
+                <a href="contact.html"><span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">account_circle</span></a>
+            </div>
+            <a href="#pricing" class="hidden sm:inline-block bg-[#f6be39] text-[#131313] px-6 py-2 text-sm font-black hover:bg-white transition-colors duration-200">JOIN THE GRIND</a>
+            <!-- Mobile menu button -->
+            <button id="menu-toggle" class="md:hidden flex items-center justify-center" aria-label="Toggle menu">
+                <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+                <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#131313]/95 backdrop-blur-xl border-t border-[#f6be39]/15 px-6 pb-8 pt-4">
+        <div class="flex flex-col gap-4">
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="index.html">Home</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="about.html">About</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-[#f6be39]" href="community.html">Community</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="mentorship.html">Mentorship</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="workshops.html">Workshops</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="resources.html">Resources</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="blog.html">Blog</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="events.html">Events</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="shop.html">Shop</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="contact.html">Contact</a>
+            <a href="#pricing" class="bg-[#f6be39] text-[#131313] px-6 py-3 text-sm font-black hover:bg-white transition-colors duration-200 text-center mt-4">JOIN THE GRIND</a>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative min-h-[819px] flex flex-col justify-center px-6 lg:px-24 overflow-hidden border-b border-outline-variant/20">
+        <div class="blueprint-grid absolute inset-0"></div>
+        <div class="absolute right-0 top-0 w-1/2 h-full hidden lg:block opacity-40">
+            <img class="w-full h-full object-cover mix-blend-luminosity grayscale shadow-2xl" alt="Industrial construction site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT03cMBqVoXNsbBYFAauPiv9DM3s_KgSm6RVaWzNkeFfRHqPSn2IaYQsGoDynsfUUAHvgJkCIR6xKVXH7avYqlESsWsiALQdAHTTkMtoGU9GzEnXSHzPZ7FXXGvl-U3fnv1cbO5hh9vfCKiSqNYDURNvIxEIDQKMy-3zU-YZG_uyYEJoMrYj0TioXpDGgVH95LyMNkx9pgI7IKeeP4H4BKInkoS50r5aBQomgPyFPdHHLAl0768-BgyQgfyVC2OsMQw_sw9FOVYck-"/>
+            <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl">
+            <div class="inline-block bg-primary px-3 py-1 mb-6">
+                <span class="text-on-primary text-[10px] font-black uppercase tracking-[0.3em]">Operational Excellence</span>
+            </div>
+            <h1 class="font-headline font-black text-6xl md:text-9xl uppercase leading-[0.85] tracking-tighter mb-8">
+                JOIN THE <br/><span class="text-primary">GRIND</span>
+            </h1>
+            <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl border-l-4 border-primary pl-6 leading-relaxed">
+                The elite community for contractors who work ON their business, not just in it. Scale your operations with industrial precision.
+            </p>
+            <div class="mt-12 flex flex-wrap gap-4">
+                <a href="#pricing" class="bg-primary text-on-primary text-lg font-black px-10 py-5 uppercase tracking-widest hover:brightness-110 transition-all">ESTABLISH MEMBERSHIP</a>
+                <a href="#faq" class="border-2 border-outline text-white text-lg font-black px-10 py-5 uppercase tracking-widest hover:bg-white/5 transition-all">VIEW BLUEPRINTS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 px-6 lg:px-24 bg-surface-container-lowest">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div>
+                <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm">Tiered Access</span>
+                <h2 class="text-5xl font-black uppercase mt-4">Select Your Grade</h2>
+            </div>
+            <div class="text-right text-on-surface-variant max-w-md font-label uppercase text-[10px] tracking-widest">
+                All memberships include lifetime status tracking and access to the regional contractor network database.
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+            <!-- Apprentice -->
+            <div class="bg-surface-container border border-outline-variant/20 p-10 flex flex-col hover:bg-surface-container-high transition-colors group">
+                <div class="mb-12">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mb-2">Apprentice</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-4xl font-bold">$0</span>
+                        <span class="text-on-surface-variant text-sm font-label uppercase">/ Forever</span>
+                    </div>
+                </div>
+                <div class="flex-grow space-y-6 mb-12">
+                    <div class="flex items-center gap-4 text-on-surface-variant group-hover:text-on-surface">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Forum Access</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant group-hover:text-on-surface">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Weekly Newsletter</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant group-hover:text-on-surface">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Resource Library</span>
+                    </div>
+                </div>
+                <button class="w-full bg-transparent border-2 border-primary text-primary font-black py-4 uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all">INITIATE FREE</button>
+            </div>
+            <!-- Journeyman -->
+            <div class="bg-surface-container-high border-2 border-primary p-10 flex flex-col relative md:scale-105 z-10 shadow-2xl">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em]">
+                    Most Popular
+                </div>
+                <div class="mb-12">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mb-2">Journeyman</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-4xl font-bold">$49</span>
+                        <span class="text-on-surface-variant text-sm font-label uppercase">/ Monthly</span>
+                    </div>
+                </div>
+                <div class="flex-grow space-y-6 mb-12">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Everything in Apprentice</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Monthly Group Calls</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Workshop Recordings</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">SOP Templates</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Pricing Calculators</span>
+                    </div>
+                </div>
+                <button class="w-full bg-primary text-on-primary font-black py-4 uppercase tracking-[0.2em] hover:bg-primary-container transition-all">SECURE TIER</button>
+            </div>
+            <!-- Master -->
+            <div class="bg-surface-container border border-outline-variant/20 p-10 flex flex-col hover:bg-surface-container-high transition-colors group">
+                <div class="mb-12">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mb-2">Master</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-4xl font-bold">$199</span>
+                        <span class="text-on-surface-variant text-sm font-label uppercase">/ Monthly</span>
+                    </div>
+                </div>
+                <div class="flex-grow space-y-6 mb-12">
+                    <div class="flex items-center gap-4 text-on-surface-variant group-hover:text-on-surface">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Everything Plus</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant group-hover:text-on-surface">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">1-on-1 Mentorship</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant group-hover:text-on-surface">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Mastermind Group</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant group-hover:text-on-surface">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Priority Support</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant group-hover:text-on-surface">
+                        <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                        <span class="uppercase text-xs font-bold tracking-widest">Merch Discounts</span>
+                    </div>
+                </div>
+                <button class="w-full bg-transparent border-2 border-primary text-primary font-black py-4 uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all">ACQUIRE MASTERY</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-32 px-6 lg:px-24 bg-background">
+        <h2 class="text-4xl font-black uppercase mb-16 tracking-tighter border-b border-primary w-fit pb-4">On-Site Reports</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Card 1 -->
+            <div class="flex flex-col gap-6">
+                <div class="w-full aspect-square bg-surface-container grayscale overflow-hidden">
+                    <img class="w-full h-full object-cover" alt="Marcus Vance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3m_VdSAHaVkCMpbmbaICkq_8pREXOvcLUxuDVlPtt8O2tk6N0HRcI9BJN4Muleyw_6BN9YZe9IojGXQJkWn_IbrGaIckVeLrMcmDIWNlhR0NuxISNXp1SwmZjYBPbwjNqdk0yOpSuWjucCqYR8CvYCDopW4o4qP5UTjHFHPzgElY_KJcsbIEU1kfVLjvQwXic4gUl9j9_1o9I6HtJjgl1QPN5CY2phR6lZPbqf3mvG5ac0ZkdtlxXmQLoQPB5-3T6WvpkwaWTT4VM"/>
+                </div>
+                <div class="space-y-4">
+                    <p class="italic text-lg text-on-surface-variant leading-relaxed">"The SOP templates alone saved me 20 hours a week in paperwork. This isn't just a community; it's an operational manual for your life."</p>
+                    <div>
+                        <p class="font-black uppercase tracking-widest text-sm">Marcus Vance</p>
+                        <p class="text-primary text-[10px] font-bold uppercase tracking-widest">Founder, Vance Heavy Civil</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="flex flex-col gap-6 mt-12 md:mt-0">
+                <div class="w-full aspect-square bg-surface-container grayscale overflow-hidden">
+                    <img class="w-full h-full object-cover" alt="Elena Rodriguez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbGeSb_tW0Ceeok2FoBzcl70dcE6QAhd9j2D86dYKmRMzjKApAz4cRFehcrv6cZPsxtZ_T-KzRQUkNXwkDAJOhAVZdOice8y1VLcqEkPLOAZGAihYnX54Fg6QpQyHu7-TD88cJfhDazXxKpFFdX6gFf20RTX1I06aEwsDBpVp14go9epoIctZ_SQE2ErCQSCRK_bqTbzOXgMH3HVn1neNmhflm1fBpSI-JG0ar36g4RfdxFOC46P6ZUb8uJ38KSVA7iJpZKeKfjzHA"/>
+                </div>
+                <div class="space-y-4">
+                    <p class="italic text-lg text-on-surface-variant leading-relaxed">"The Mastermind group connected me with contractors doing 10x my volume. Seeing their 'blueprints' changed how I view scalability."</p>
+                    <div>
+                        <p class="font-black uppercase tracking-widest text-sm">Elena Rodriguez</p>
+                        <p class="text-primary text-[10px] font-bold uppercase tracking-widest">CEO, Skybound Electrical</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="flex flex-col gap-6 mt-12 lg:mt-0">
+                <div class="w-full aspect-square bg-surface-container grayscale overflow-hidden">
+                    <img class="w-full h-full object-cover" alt="Jason Thorne" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdkRbC3i12m49XBSpM2zrqRx-fEq8TtZs2sD-ERKZ4ste_d9KlSnPthtuPocoSqismJd1_X0WZhg0W1-WJ5R_C_npCQ1vxI0j_MkBv-aqx4JboMobvX2lCSw78vm6qQfUjxdVJgfuhIr38a8zkqWxcKLPDG923otA9tbIy68jPbGLrDjFT9KTu3lM_e61nD6sDEqh75R5fhzPrmowWWm5BR2hIlGU8WVlSG3KlF0aR8WNY-sUuTPr4my6pMpK7w4AKlkVyWOdktGNi"/>
+                </div>
+                <div class="space-y-4">
+                    <p class="italic text-lg text-on-surface-variant leading-relaxed">"I went from a one-man show to a crew of twelve in 18 months. The Long Slow Grind provided the structural integrity my business lacked."</p>
+                    <div>
+                        <p class="font-black uppercase tracking-widest text-sm">Jason Thorne</p>
+                        <p class="text-primary text-[10px] font-bold uppercase tracking-widest">Lead, Timber &amp; Iron Works</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-32 px-6 lg:px-24 bg-surface-container-low border-t border-outline-variant/10">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black uppercase tracking-tighter mb-4">Structural Analysis</h2>
+                <p class="text-on-surface-variant font-label text-xs tracking-widest uppercase">Frequently Asked Technical Specs</p>
+            </div>
+            <div class="space-y-0">
+                <details class="border-y border-outline-variant/20 group">
+                    <summary class="flex justify-between items-center py-8 cursor-pointer list-none group-hover:text-primary transition-colors">
+                        <h4 class="text-xl font-bold uppercase tracking-tight">How often are the workshop recordings updated?</h4>
+                        <span class="material-symbols-outlined group-open:rotate-45 transition-transform duration-200">add</span>
+                    </summary>
+                    <div class="pb-8 text-on-surface-variant leading-relaxed">
+                        Workshop recordings are uploaded within 48 hours of each live session. We run 2-4 workshops per month, covering topics from estimating and bidding to crew management and business development. All recordings are archived and searchable in your member dashboard.
+                    </div>
+                </details>
+                <details class="border-b border-outline-variant/20 group">
+                    <summary class="flex justify-between items-center py-8 cursor-pointer list-none group-hover:text-primary transition-colors">
+                        <h4 class="text-xl font-bold uppercase tracking-tight">Can I upgrade my tier mid-billing cycle?</h4>
+                        <span class="material-symbols-outlined group-open:rotate-45 transition-transform duration-200">add</span>
+                    </summary>
+                    <div class="pb-8 text-on-surface-variant leading-relaxed">
+                        Absolutely. Upgrades take effect immediately and you'll only be charged the prorated difference for the remainder of your billing cycle. Downgrades take effect at the start of your next billing period.
+                    </div>
+                </details>
+                <details class="border-b border-outline-variant/20 group">
+                    <summary class="flex justify-between items-center py-8 cursor-pointer list-none group-hover:text-primary transition-colors">
+                        <h4 class="text-xl font-bold uppercase tracking-tight">Is mentorship available for sub-contractors?</h4>
+                        <span class="material-symbols-outlined group-open:rotate-45 transition-transform duration-200">add</span>
+                    </summary>
+                    <div class="pb-8 text-on-surface-variant leading-relaxed">
+                        Yes. Our mentorship program is designed for anyone in the trades, whether you're a general contractor, specialty sub, or owner-operator. The Master tier includes 1-on-1 mentorship sessions tailored to your specific trade and business stage.
+                    </div>
+                </details>
+                <details class="border-b border-outline-variant/20 group">
+                    <summary class="flex justify-between items-center py-8 cursor-pointer list-none group-hover:text-primary transition-colors">
+                        <h4 class="text-xl font-bold uppercase tracking-tight">What is the 'Safety Manual' protocol for the forums?</h4>
+                        <span class="material-symbols-outlined group-open:rotate-45 transition-transform duration-200">add</span>
+                    </summary>
+                    <div class="pb-8 text-on-surface-variant leading-relaxed">
+                        The Safety Manual is our community code of conduct. We maintain a zero-tolerance policy for spam, self-promotion without value, and disrespect. This is a professional network -- every interaction should add structural integrity to the community, not tear it down.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 bg-primary text-on-primary">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-none italic">
+                STOP REPAIRING.<br/>START BUILDING.
+            </h2>
+            <a href="#pricing" class="inline-block bg-background text-primary px-16 py-6 text-2xl font-black uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all">
+                GET ACCESS NOW
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+        <div class="col-span-1 md:col-span-1">
+            <div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+            <p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">Dedicated to the trades. Building the systems that build the world. No shortcuts, just hard-won expertise.</p>
+        </div>
+        <div>
+            <h4 class="text-[#D4A017] mb-4 font-bold tracking-widest">Resources</h4>
+            <ul class="space-y-2">
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="blog.html">Blog</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="events.html">Events</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="shop.html">Shop</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="resources.html">Tools</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-[#D4A017] mb-4 font-bold tracking-widest">Company</h4>
+            <ul class="space-y-2">
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="about.html">About</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="community.html">Community</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="mentorship.html">Mentorship</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="workshops.html">Workshops</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-[#D4A017] mb-4 font-bold tracking-widest">Connect</h4>
+            <ul class="space-y-2">
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="contact.html">Contact</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">YouTube</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+                <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">TikTok</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+        &copy; 2026 THE LONG SLOW GRIND. BUILT TO LAST.
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

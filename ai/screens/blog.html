@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>From The Trenches | THE LONG SLOW GRIND</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#f6be39",
+              "surface-container-high": "#2a2a2a",
+              "secondary-fixed": "#ffdfa0",
+              "primary": "#f6be39",
+              "on-tertiary": "#003062",
+              "surface-container-low": "#1c1b1b",
+              "surface-dim": "#131313",
+              "on-primary-fixed-variant": "#5c4300",
+              "inverse-primary": "#795900",
+              "surface-container-highest": "#353535",
+              "error": "#ffb4ab",
+              "secondary-container": "#584414",
+              "background": "#131313",
+              "on-secondary-fixed": "#261a00",
+              "error-container": "#93000a",
+              "on-background": "#e5e2e1",
+              "outline-variant": "#4f4634",
+              "on-surface-variant": "#d3c5ae",
+              "surface-variant": "#353535",
+              "on-secondary-container": "#cfb177",
+              "tertiary-fixed-dim": "#a9c7ff",
+              "on-primary-container": "#503a00",
+              "tertiary-fixed": "#d6e3ff",
+              "tertiary-container": "#72a9ff",
+              "secondary": "#e1c387",
+              "primary-container": "#d4a017",
+              "on-secondary-fixed-variant": "#584414",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary-fixed-dim": "#e1c387",
+              "primary-fixed": "#ffdfa0",
+              "on-error": "#690005",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary-fixed": "#001b3d",
+              "on-secondary": "#402d00",
+              "surface-bright": "#393939",
+              "inverse-on-surface": "#313030",
+              "surface": "#131313",
+              "on-error-container": "#ffdad6",
+              "primary-fixed-dim": "#f6be39",
+              "on-surface": "#e5e2e1",
+              "tertiary": "#a9c7ff",
+              "on-tertiary-container": "#003d7a",
+              "surface-container": "#20201f",
+              "outline": "#9b8f7a",
+              "on-tertiary-fixed-variant": "#00468b",
+              "on-primary-fixed": "#261a00",
+              "on-primary": "#402d00"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            background-image: radial-gradient(rgba(212, 160, 23, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-grid-overlay {
+            background-image: linear-gradient(#D4A017 1px, transparent 1px), linear-gradient(90deg, #D4A017 1px, transparent 1px);
+            background-size: 100px 100px;
+            opacity: 0.03;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-6 py-4 z-50 bg-[#131313]/80 backdrop-blur-md border-b-2 border-[#D4A017]/10 font-['Space_Grotesk'] font-bold uppercase tracking-wider">
+<div class="text-2xl font-bold tracking-tighter text-[#D4A017]">THE LONG SLOW GRIND</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-white/70 hover:text-white transition-colors" href="#">Workshops</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Coaching</a>
+<a class="text-[#D4A017] border-b-2 border-[#D4A017] pb-1" href="#">Blueprint</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Safety</a>
+</div>
+<button class="bg-[#D4A017] text-black px-6 py-2 font-bold tracking-widest hover:bg-[#D4A017]/90 active:scale-95 transition-all">
+            JOIN THE GRIND
+        </button>
+</nav>
+<main class="pt-24 pb-20 relative">
+<div class="absolute inset-0 industrial-grid-overlay pointer-events-none"></div>
+<!-- Hero Section -->
+<header class="max-w-7xl mx-auto px-6 mb-16 relative z-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-l-8 border-primary pl-8 py-4">
+<div class="max-w-3xl">
+<span class="label-md uppercase tracking-[0.2em] text-primary font-bold mb-4 block">Field Dispatches</span>
+<h1 class="text-5xl md:text-7xl font-bold font-headline leading-[0.9] uppercase">
+                        From The <span class="text-primary-container">Trenches</span>
+</h1>
+<p class="mt-6 text-xl text-on-surface-variant font-light max-w-2xl">
+                        Stories and strategies for the working contractor. Hard-won lessons from the job site to the boardroom.
+                    </p>
+</div>
+<div class="w-full md:w-80">
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none focus:ring-2 focus:ring-primary py-4 px-6 uppercase text-sm font-bold tracking-widest placeholder:text-white/30 transition-all" placeholder="SEARCH ARCHIVES..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary">search</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Featured Post -->
+<section class="max-w-7xl mx-auto px-6 mb-20 relative z-10">
+<article class="relative min-h-[600px] flex items-end overflow-hidden group">
+<div class="absolute inset-0 bg-surface-container-lowest">
+<img alt="Industrial Construction" class="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Gritty low angle shot of a steel skyscraper skeleton against a dark moody sky with high contrast and sharp industrial details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDau2cHslMht3eblwBTnTSPg0mllnBWqIfayijbLqtIMImK3u9VcgtW1_ynLDGRNpl3GE6mt_lb91Q14cZd8J3CDQ5uGrax-1TwCE1y5XU0JiP3CCy7JuDTIPBJhGuPnuO51DtKSyn3dUHrcGHkuzYju9v5Qq9YFL95_PEU9LYy1-GC2TRJ3xM1dEJLrNjji6tDmq6okHegieRQgJ7iQ-JRbJGSa7D9fhGRSr9fLjItLQjvW8yNsI0M5yR5r6jEOz47BD6MFXxNKQFu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative p-10 md:p-16 max-w-4xl border-l-4 border-primary bg-background/40 backdrop-blur-sm m-6 md:m-12">
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-primary text-black px-3 py-1 text-xs font-bold uppercase tracking-tighter">Featured Strategy</span>
+<span class="text-xs uppercase tracking-widest text-on-surface-variant">March 14, 2024</span>
+</div>
+<h2 class="text-4xl md:text-6xl font-bold font-headline uppercase leading-none mb-6">
+                        The Structural Integrity of a Scaling Business
+                    </h2>
+<p class="text-lg text-on-surface-variant mb-8 line-clamp-3">
+                        Why most contracting firms collapse at the $5M mark and how to reinforce your foundations before the weight of growth crushes your margins.
+                    </p>
+<button class="inline-flex items-center gap-4 bg-primary text-black px-10 py-4 font-bold uppercase tracking-widest hover:bg-white transition-colors group">
+                        Read Full Blueprint
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Filter Bar -->
+<section class="max-w-7xl mx-auto px-6 mb-12 sticky top-20 z-40">
+<div class="bg-surface-container-low flex flex-wrap items-center gap-1 border-b-2 border-primary/20">
+<button class="px-8 py-4 text-xs font-bold uppercase tracking-widest bg-primary text-black">All</button>
+<button class="px-8 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Business</button>
+<button class="px-8 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Marketing</button>
+<button class="px-8 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Operations</button>
+<button class="px-8 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Mindset</button>
+</div>
+</section>
+<!-- Blog Grid -->
+<section class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<article class="bg-surface-container-low hover:translate-y-[-8px] transition-all duration-300 flex flex-col group">
+<div class="h-64 overflow-hidden relative">
+<img alt="Welding" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close up of welding sparks in a dark industrial workshop with dramatic orange highlights and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD65WXwSn3_VFeK4FKxb4Gtj-OgJCs97Ee_Uy1J_obtjPgUE9L14mA427qNf-s75RfYftSxNeYwfblAL45GsvGQpuSl4ZH_8BU8AC837DgXcDahReW2BYG8wJtdB_fRt-ZMNpOHwstSzKUSdcOTOv4p5uigbF1rlAyXA9XYMt7Wk1la_pO4W4Xk4XTQpTzBoFLDul28PjbfpzdaIfjWfDwY9K6-qMa3jzpv4y1nkFLrFopxVZNxacyPRYD2igxScgzKsCY9828rKUqn"/>
+<span class="absolute top-4 left-4 bg-primary text-black px-3 py-1 text-[10px] font-black uppercase tracking-widest">Operations</span>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">02 MAR 2024 • BY ELIAS THORNE</span>
+<h3 class="text-2xl font-bold font-headline uppercase leading-tight mb-4 group-hover:text-primary transition-colors">
+                        Hardening Your Job Site Security Protocols
+                    </h3>
+<p class="text-sm text-on-surface-variant line-clamp-3 mb-8">
+                        Theft is at an all-time high. We break down the exact hardware and software stack required to lock down your high-value assets.
+                    </p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-widest">Read Article</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-low hover:translate-y-[-8px] transition-all duration-300 flex flex-col group">
+<div class="h-64 overflow-hidden relative">
+<img alt="Modern Architecture" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Monolithic concrete structure under a heavy grey sky reflecting an industrial and minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhsayGXHsQSuoHeXEwkgGAfbwane0PAz725NCcGfR31NC94wYWLr6U3XpDGH5-YKkUC-12lm4zZZw8bLl_t-cvWrYFZ4pU5tEbxIPzo_VCdZbdxk-vGjwuZOVrrHTEpn6ueFPrc3EfvQ4sLZHWUq6wU4WSOZKg83UNQ0fHYohkOs-pSDRYn2kqjfycd1kCsVpyTrEGopY9GcZAapmCWVsXzeu3E8WM1XEOluvCKHgasxrNG_uJQTB9g1_lSiqrMPV40ZwLODzDbfc8"/>
+<span class="absolute top-4 left-4 bg-primary text-black px-3 py-1 text-[10px] font-black uppercase tracking-widest">Mindset</span>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">28 FEB 2024 • BY SARAH JENKINS</span>
+<h3 class="text-2xl font-bold font-headline uppercase leading-tight mb-4 group-hover:text-primary transition-colors">
+                        The Psychology of the 4 AM Start
+                    </h3>
+<p class="text-sm text-on-surface-variant line-clamp-3 mb-8">
+                        Discipline isn't a gift, it's a structural requirement. How to build a routine that survives the chaos of a mid-project crisis.
+                    </p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-widest">Read Article</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-low hover:translate-y-[-8px] transition-all duration-300 flex flex-col group">
+<div class="h-64 overflow-hidden relative">
+<img alt="Technical Drawing" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Blueprint blueprints and a mechanical pencil on a dark wooden table with high contrast technical lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtEb_VjF_i33yw_YLUtixCMRTArXCUKcEz4v90SxrkEgHN8DQ6BYu1I96kFYYkYwwCL_4KCsI2MCyt3iEWN6LcFmCVGpWGYMO5K7ZFG0W0bVbQ21QT_EzA-arHJBiAHrX-irJ3xjMAqz70gjc0sCjEXiiEGM8uVMohCs3afbCZIdnkMiT6jgBVLOL84RBIgXib_ApiokfvCkpb-FrtqZ3wtDawAlT-sNjkR4zJrQ_koxtldIn49gS38W8dytbmNqIAO8LHw06EjjoV"/>
+<span class="absolute top-4 left-4 bg-primary text-black px-3 py-1 text-[10px] font-black uppercase tracking-widest">Business</span>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">22 FEB 2024 • BY MARCUS VANCE</span>
+<h3 class="text-2xl font-bold font-headline uppercase leading-tight mb-4 group-hover:text-primary transition-colors">
+                        Negotiating Large-Scale Contracts
+                    </h3>
+<p class="text-sm text-on-surface-variant line-clamp-3 mb-8">
+                        Stop leaving 15% on the table. Learn the industrial-grade negotiation tactics that win the bid without sacrificing your dignity.
+                    </p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-widest">Read Article</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-low hover:translate-y-[-8px] transition-all duration-300 flex flex-col group">
+<div class="h-64 overflow-hidden relative">
+<img alt="Work Boots" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Worn leather work boots on a dusty concrete floor with dramatic low lighting and sharp texture details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBRe3X2xTlYCxe0nDAeGdll86DZwvplOsgbmB53Hi3e2ElqBvVPGtsSuF4Iwgzm43rzB_yiovVEWh9817MWPpmhd6FdVm63H8MFQykS-h2tU3OstEpGH2XZhnrDZcHJznF9RIh45Pm70VThAZt_993MeZ6KbBmmiLuIKPIFddocVTs85ySbgm_-JZtsWGLXPIoBy5YFc9z6sos4qdcztFSH20zpqW9D0uul84xUY7PR5bU7zjLo4ljH6mC8vFfIUCeJqKmR4KH7Czj"/>
+<span class="absolute top-4 left-4 bg-primary text-black px-3 py-1 text-[10px] font-black uppercase tracking-widest">Mindset</span>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">15 FEB 2024 • BY ELIAS THORNE</span>
+<h3 class="text-2xl font-bold font-headline uppercase leading-tight mb-4 group-hover:text-primary transition-colors">
+                        When the Grind Grinds You Down
+                    </h3>
+<p class="text-sm text-on-surface-variant line-clamp-3 mb-8">
+                        Burnout is a structural failure. Recognizing the warning signs before the cracks in your leadership become permanent.
+                    </p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-widest">Read Article</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="bg-surface-container-low hover:translate-y-[-8px] transition-all duration-300 flex flex-col group">
+<div class="h-64 overflow-hidden relative">
+<img alt="Marketing Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Digital analytic charts projected on a dark concrete wall in a modern industrial office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdPqbiSODRSqRB6WLz5ENB1IHF23SR4HuvbiLP47g1CEK42opcHU2mQCZzaQTiXY1uu8ZflucVFaxeXYACzN4pOg1hJsNLXiqsT--RNmsh8HcmkmmQ--LpEhtYJsvdd9gip6WmLOjrj6PP2GQrdd94RXjtdY2VIfVPU1U8RuJgrQ2x94z7kGPWYs9bP4xsL7WaWcIrlAYSml6_CMPM7ZteRBdGT6b-bkwhdrOD-76W504-etDzSrmp0zWhMMq4BgoZU69o5Y_STmGY"/>
+<span class="absolute top-4 left-4 bg-primary text-black px-3 py-1 text-[10px] font-black uppercase tracking-widest">Marketing</span>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">10 FEB 2024 • BY JAXON REED</span>
+<h3 class="text-2xl font-bold font-headline uppercase leading-tight mb-4 group-hover:text-primary transition-colors">
+                        SEO for the Blue Collar Giant
+                    </h3>
+<p class="text-sm text-on-surface-variant line-clamp-3 mb-8">
+                        Why your local competitors are outranking you and the exact technical framework to dominate your regional market.
+                    </p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-widest">Read Article</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="bg-surface-container-low hover:translate-y-[-8px] transition-all duration-300 flex flex-col group">
+<div class="h-64 overflow-hidden relative">
+<img alt="Equipment" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A heavy duty excavator claw in sharp focus against a blurred construction site background at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMlHEbXAVTZlCjJ2Qo4GTXX-eau0_mtw8dlGYRxHOyZHcy0Ni7Tr1f3WHCfWS_xRuuEX6sFU7KOb0lSXuc_fmyS9I6Mdp3GpZxVEV8Q8046YgS0gIyosgnfK574meeXEEzMV8JbkZ7yxc0OWbd36IOOVrEvwynas6wGPvFXdWfsnC2-bQC3LuH75lZC0DPEmy1J0zoxlKtWIpCTGRFLf3437mMkomibVY9_nZAdxAskpqGnK0m4EE8U0rsj8TdrXmgpzAHbe6wkGKn"/>
+<span class="absolute top-4 left-4 bg-primary text-black px-3 py-1 text-[10px] font-black uppercase tracking-widest">Operations</span>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">05 FEB 2024 • BY ELIAS THORNE</span>
+<h3 class="text-2xl font-bold font-headline uppercase leading-tight mb-4 group-hover:text-primary transition-colors">
+                        Maintaining the Fleet: Tech Trends
+                    </h3>
+<p class="text-sm text-on-surface-variant line-clamp-3 mb-8">
+                        IoT sensors and predictive maintenance. Is it worth the investment or just another digital distraction for your crew?
+                    </p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-widest">Read Article</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Pagination -->
+<nav class="max-w-7xl mx-auto px-6 mt-20 flex justify-center">
+<div class="flex items-center gap-2">
+<button class="w-12 h-12 flex items-center justify-center border-2 border-primary/20 hover:border-primary transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center bg-primary text-black font-bold">1</button>
+<button class="w-12 h-12 flex items-center justify-center border-2 border-primary/20 hover:border-primary transition-colors text-on-surface-variant font-bold">2</button>
+<button class="w-12 h-12 flex items-center justify-center border-2 border-primary/20 hover:border-primary transition-colors text-on-surface-variant font-bold">3</button>
+<span class="px-4 text-on-surface-variant">...</span>
+<button class="w-12 h-12 flex items-center justify-center border-2 border-primary/20 hover:border-primary transition-colors text-on-surface-variant font-bold">12</button>
+<button class="w-12 h-12 flex items-center justify-center border-2 border-primary/20 hover:border-primary transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</nav>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 bg-[#131313] border-t-4 border-[#D4A017] font-['Space_Grotesk'] text-xs uppercase tracking-[0.05rem]">
+<div class="text-lg font-bold text-[#D4A017]">THE LONG SLOW GRIND</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-white/40 hover:text-white transition-opacity hover:underline decoration-[#D4A017] decoration-2" href="#">Privacy Policy</a>
+<a class="text-white/40 hover:text-white transition-opacity hover:underline decoration-[#D4A017] decoration-2" href="#">Terms of Service</a>
+<a class="text-white/40 hover:text-white transition-opacity hover:underline decoration-[#D4A017] decoration-2" href="#">Safety Protocols</a>
+<a class="text-white/40 hover:text-white transition-opacity hover:underline decoration-[#D4A017] decoration-2" href="#">Contact Us</a>
+</div>
+<div class="text-white/40">© 2024 THE LONG SLOW GRIND. BUILT TO LAST.</div>
+</footer>
+</body></html>
