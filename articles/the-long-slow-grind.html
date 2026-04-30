@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Long Slow Grind | THE LONG SLOW GRIND</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "tertiary-fixed": "#d6e3ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#003d7a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#5c4300",
+                        "surface-tint": "#f6be39",
+                        "secondary-fixed": "#ffdfa0",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#00468b",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#cfb177",
+                        "on-surface-variant": "#d3c5ae",
+                        "tertiary-container": "#72a9ff",
+                        "on-secondary-fixed-variant": "#584414",
+                        "on-primary-container": "#503a00",
+                        "surface-container": "#20201f",
+                        "secondary-fixed-dim": "#e1c387",
+                        "tertiary-fixed-dim": "#a9c7ff",
+                        "primary-container": "#d4a017",
+                        "secondary": "#e1c387",
+                        "outline": "#9b8f7a",
+                        "outline-variant": "#4f4634",
+                        "primary-fixed-dim": "#f6be39",
+                        "on-primary": "#402d00",
+                        "surface-container-highest": "#353535",
+                        "on-secondary": "#402d00",
+                        "on-primary-fixed": "#261a00",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-tertiary": "#003062",
+                        "tertiary": "#a9c7ff",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-container": "#584414",
+                        "primary-fixed": "#ffdfa0",
+                        "surface-variant": "#353535",
+                        "on-background": "#e5e2e1",
+                        "inverse-primary": "#795900",
+                        "primary": "#f6be39"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            background-image: radial-gradient(rgba(212, 160, 23, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-grid-overlay {
+            background-image: linear-gradient(#D4A017 1px, transparent 1px), linear-gradient(90deg, #D4A017 1px, transparent 1px);
+            background-size: 100px 100px;
+            opacity: 0.03;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-xl border-b border-[#f6be39]/15 flex justify-between items-center px-6 h-20 transition-all duration-150 ease-linear">
+        <a href="../index.html" class="text-2xl font-black text-[#f6be39] tracking-tighter font-headline">THE LONG SLOW GRIND</a>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../index.html">Home</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../about.html">About</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../community.html">Community</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../mentorship.html">Mentorship</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../workshops.html">Workshops</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../resources.html">Resources</a>
+            <a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="../blog.html">Blog</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../events.html">Events</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../shop.html">Shop</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                JOIN THE GRIND
+            </button>
+            <!-- Mobile menu toggle -->
+            <button id="menu-toggle" class="md:hidden text-[#f6be39]">
+                <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+                <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#131313]/95 backdrop-blur-xl pt-24 px-6 overflow-y-auto">
+        <div class="flex flex-col space-y-6">
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../index.html">Home</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../about.html">About</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../community.html">Community</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../mentorship.html">Mentorship</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../workshops.html">Workshops</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../resources.html">Resources</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-[#f6be39]" href="../blog.html">Blog</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../events.html">Events</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../shop.html">Shop</a>
+            <div class="pt-6 border-t border-[#f6be39]/15">
+                <button class="w-full bg-primary text-on-primary px-6 py-4 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                    JOIN THE GRIND
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="pt-24 pb-20 relative">
+        <div class="absolute inset-0 industrial-grid-overlay pointer-events-none"></div>
+        <!-- Back link -->
+        <div class="max-w-3xl mx-auto px-6 pt-8 relative z-10">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back to Blog
+            </a>
+        </div>
+        <!-- Article Hero -->
+        <header class="relative z-10 mt-8 mb-16">
+            <div class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+                <div class="absolute inset-0 bg-surface-container-lowest">
+                    <img alt="The Long Slow Grind" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDau2cHslMht3eblwBTnTSPg0mllnBWqIfayijbLqtIMImK3u9VcgtW1_ynLDGRNpl3GE6mt_lb91Q14cZd8J3CDQ5uGrax-1TwCE1y5XU0JiP3CCy7JuDTIPBJhGuPnuO51DtKSyn3dUHrcGHkuzYju9v5Qq9YFL95_PEU9LYy1-GC2TRJ3xM1dEJLrNjji6tDmq6okHegieRQgJ7iQ-JRbJGSa7D9fhGRSr9fLjItLQjvW8yNsI0M5yR5r6jEOz47BD6MFXxNKQFu" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                </div>
+                <div class="relative max-w-4xl mx-auto px-6 pb-12">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-xs uppercase tracking-widest text-primary">By Josh Cotner</span>
+                        <span class="text-on-surface-variant">•</span>
+                        <span class="text-xs uppercase tracking-widest text-on-surface-variant">30 APR 2026</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold font-headline uppercase leading-[0.95]">The Long Slow Grind</h1>
+                </div>
+            </div>
+        </header>
+        <!-- Article Content -->
+        <article class="max-w-3xl mx-auto px-6 relative z-10">
+            <div class="text-lg leading-relaxed text-on-surface/90 space-y-6">
+                <p>Nobody claps for consistency. There's no applause when you wake up early to study policy forms while the house is quiet. No trophies for reading endorsements line by line, trying to understand what isn't covered just as much as what is. No spotlight for answering a client's question at 8:30 p.m. because that's when they finally had time to call. But that's where the real work lives—in the long, slow grind.</p>
+                <p>I didn't get into insurance because it was glamorous. I got into it because it mattered. At first, I didn't fully understand how much. It just seemed like a career where if I worked hard enough, I could build something stable—for myself, for my family.</p>
+                <p>Being a dad changed everything. Suddenly, "good enough" wasn't good enough anymore. I wasn't just selling policies—I was building a life that my kids would grow up watching. Every late night studying coverage forms, every uncomfortable sales call, every follow-up that would have been easy to skip… it all started to feel like part of a bigger responsibility. Because they're always watching.</p>
+                <p>So I leaned into the process. I studied insurance not to pass a test, but to actually understand it. Why does this exclusion exist? When does this policy fail someone? What's the gap that could cost a family everything? I wanted to be the guy who knew, not the guy who guessed.</p>
+                <p>And slowly, that started to show. Customers would come in confused, frustrated, sometimes burned by a bad experience. They didn't need a pitch—they needed clarity. They needed someone who would sit down, explain things in plain language, and actually care whether they were protected when things went wrong.</p>
+                <p>So that's what I did. I stopped trying to "sell" and started trying to help. And ironically, that's when things began to work.</p>
+                <p>Not overnight. Never overnight. The long slow grind doesn't reward you quickly. It tests you first. It asks if you're willing to show up when it's boring. When it's repetitive. When it feels like no one notices.</p>
+                <p>But over time, something builds. You start to recognize patterns. You get sharper. Your conversations get better. Your confidence becomes quieter—but stronger. People begin to trust you, not because of what you say, but because of how consistently you show up.</p>
+                <p>And at home, your kids see it too. They don't see the policies or the commissions. They see the discipline. The patience. The fact that you keep going, even when it would be easier not to.</p>
+                <p>That's the real win. Because one day, they'll understand what you were doing all those nights at the table with your laptop open. They'll understand that success isn't a moment—it's a process. A long, steady commitment to doing things the right way, even when nobody's watching. Especially then.</p>
+                <p>That's the long slow grind. And it's worth it.</p>
+            </div>
+        </article>
+        <!-- Back to Blog Bottom -->
+        <div class="max-w-3xl mx-auto px-6 mt-16 relative z-10 border-t border-white/10 pt-8">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back to Blog
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+            <div class="col-span-1 md:col-span-1">
+                <div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+                <p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">The premier industrial community for tradesmen and contractors committed to excellence.</p>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Resources</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../blog.html">Blog</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../events.html">Events</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Privacy</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Connect</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../contact.html">Contact</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+            &copy; 2026 THE LONG SLOW GRIND. BUILT TO LAST.
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

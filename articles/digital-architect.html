@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Digital Architect | THE LONG SLOW GRIND</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "tertiary-fixed": "#d6e3ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#003d7a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#5c4300",
+                        "surface-tint": "#f6be39",
+                        "secondary-fixed": "#ffdfa0",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#00468b",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#cfb177",
+                        "on-surface-variant": "#d3c5ae",
+                        "tertiary-container": "#72a9ff",
+                        "on-secondary-fixed-variant": "#584414",
+                        "on-primary-container": "#503a00",
+                        "surface-container": "#20201f",
+                        "secondary-fixed-dim": "#e1c387",
+                        "tertiary-fixed-dim": "#a9c7ff",
+                        "primary-container": "#d4a017",
+                        "secondary": "#e1c387",
+                        "outline": "#9b8f7a",
+                        "outline-variant": "#4f4634",
+                        "primary-fixed-dim": "#f6be39",
+                        "on-primary": "#402d00",
+                        "surface-container-highest": "#353535",
+                        "on-secondary": "#402d00",
+                        "on-primary-fixed": "#261a00",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-tertiary": "#003062",
+                        "tertiary": "#a9c7ff",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-container": "#584414",
+                        "primary-fixed": "#ffdfa0",
+                        "surface-variant": "#353535",
+                        "on-background": "#e5e2e1",
+                        "inverse-primary": "#795900",
+                        "primary": "#f6be39"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            background-image: radial-gradient(rgba(212, 160, 23, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-grid-overlay {
+            background-image: linear-gradient(#D4A017 1px, transparent 1px), linear-gradient(90deg, #D4A017 1px, transparent 1px);
+            background-size: 100px 100px;
+            opacity: 0.03;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+    <nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-xl border-b border-[#f6be39]/15 flex justify-between items-center px-6 h-20 transition-all duration-150 ease-linear">
+        <a href="../index.html" class="text-2xl font-black text-[#f6be39] tracking-tighter font-headline">THE LONG SLOW GRIND</a>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../index.html">Home</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../about.html">About</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../community.html">Community</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../mentorship.html">Mentorship</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../workshops.html">Workshops</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../resources.html">Resources</a>
+            <a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="../blog.html">Blog</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../events.html">Events</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../shop.html">Shop</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">JOIN THE GRIND</button>
+            <button id="menu-toggle" class="md:hidden text-[#f6be39]">
+                <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+                <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+            </button>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#131313]/95 backdrop-blur-xl pt-24 px-6 overflow-y-auto">
+        <div class="flex flex-col space-y-6">
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../index.html">Home</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../about.html">About</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../community.html">Community</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../mentorship.html">Mentorship</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../workshops.html">Workshops</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../resources.html">Resources</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-[#f6be39]" href="../blog.html">Blog</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../events.html">Events</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../shop.html">Shop</a>
+            <div class="pt-6 border-t border-[#f6be39]/15">
+                <button class="w-full bg-primary text-on-primary px-6 py-4 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">JOIN THE GRIND</button>
+            </div>
+        </div>
+    </div>
+    <main class="pt-24 pb-20 relative">
+        <div class="absolute inset-0 industrial-grid-overlay pointer-events-none"></div>
+        <div class="max-w-3xl mx-auto px-6 pt-8 relative z-10">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span> Back to Blog
+            </a>
+        </div>
+        <header class="relative z-10 mt-8 mb-16">
+            <div class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+                <div class="absolute inset-0 bg-surface-container-lowest">
+                    <img alt="Digital Architect" class="w-full h-full object-cover grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD65WXwSn3_VFeK4FKxb4Gtj-OgJCs97Ee_Uy1J_obtjPgUE9L14mA427qNf-s75RfYftSxNeYwfblAL45GsvGQpuSl4ZH_8BU8AC837DgXcDahReW2BYG8wJtdB_fRt-ZMNpOHwstSzKUSdcOTOv4p5uigbF1rlAyXA9XYMt7Wk1la_pO4W4Xk4XTQpTzBoFLDul28PjbfpzdaIfjWfDwY9K6-qMa3jzpv4y1nkFLrFopxVZNxacyPRYD2igxScgzKsCY9828rKUqn" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                </div>
+                <div class="relative max-w-4xl mx-auto px-6 pb-12">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-xs uppercase tracking-widest text-primary">By Josh Cotner</span>
+                        <span class="text-on-surface-variant">•</span>
+                        <span class="text-xs uppercase tracking-widest text-on-surface-variant">07 MAR 2026</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold font-headline uppercase leading-[0.95]">Digital Architect</h1>
+                </div>
+            </div>
+        </header>
+        <article class="max-w-3xl mx-auto px-6 relative z-10">
+            <div class="text-lg leading-relaxed text-on-surface/90 space-y-6">
+                <p>I wasn't born into this.</p>
+                <p>I'm not a digital native.</p>
+                <p>I didn't grow up with funnels, CRMs, automations, APIs, or AI tools at my fingertips. I didn't instinctively know how to wire systems together or scale workflows with a few clicks.</p>
+                <p>I learned it.</p>
+                <p>Piece by piece. Problem by problem.</p>
+                <p>Because at some point, doing everything manually stopped making sense.</p>
+                <p>There are only so many hours in a day. Only so many calls you can take. Only so many follow-ups you can remember. And if your business depends entirely on what you can physically do in a day—you're capped.</p>
+                <p>That realization changed how I looked at everything.</p>
+                <p>I stopped asking, "How do I get this done?"</p>
+                <p>And started asking, "How do I build this so it gets done without me?"</p>
+                <p>That's the shift.</p>
+                <p>Not digital native.</p>
+                <p>Digital architect.</p>
+                <p>I started building systems the same way I approached insurance—understand the structure, identify the gaps, then design something that holds under pressure.</p>
+                <p>Zaps connected platforms that were never meant to talk.</p>
+                <p>CRMs stopped being just databases and became engines.</p>
+                <p>AI turned from a novelty into leverage.</p>
+                <p>Tasks that used to take hours? Now they happen in seconds.</p>
+                <p>Follow-ups trigger automatically.</p>
+                <p>Leads get routed instantly.</p>
+                <p>Content gets generated, refined, deployed.</p>
+                <p>Processes don't rely on memory—they run on structure.</p>
+                <p>And it compounds.</p>
+                <p>One automation saves minutes.</p>
+                <p>Ten automations save hours.</p>
+                <p>A hundred? That's where things start to feel unfair.</p>
+                <p>You're operating at 10x, 50x, 100x—not because you're working harder, but because you've built systems that work for you.</p>
+                <p>But here's the part most people miss—</p>
+                <p>It's not about the tools.</p>
+                <p>Anyone can sign up for software.</p>
+                <p>The real advantage is in how you think.</p>
+                <p>Seeing inefficiency where others see "just part of the job."</p>
+                <p>Designing workflows instead of reacting to tasks.</p>
+                <p>Building once—and letting it run.</p>
+                <p>That's architecture.</p>
+                <p>And just like anything else, it didn't happen overnight.</p>
+                <p>There were broken zaps.</p>
+                <p>Loops that didn't fire.</p>
+                <p>Data that went nowhere.</p>
+                <p>Workflows that made things worse before they made them better.</p>
+                <p>But each failure taught something.</p>
+                <p>Where the bottlenecks were.</p>
+                <p>What actually mattered.</p>
+                <p>What could be removed entirely.</p>
+                <p>Now, the business doesn't move slower when things get busy—it moves faster.</p>
+                <p>Because it's not dependent on manual effort anymore.</p>
+                <p>It's structured.</p>
+                <p>It's built.</p>
+                <p>I may not be a digital native.</p>
+                <p>But I know how to design systems that scale.</p>
+                <p>And once you understand that—</p>
+                <p>You don't just work in your business.</p>
+                <p>You engineer it.</p>
+            </div>
+        </article>
+        <div class="max-w-3xl mx-auto px-6 mt-16 relative z-10 border-t border-white/10 pt-8">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span> Back to Blog
+            </a>
+        </div>
+    </main>
+    <footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+            <div class="col-span-1 md:col-span-1">
+                <div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+                <p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">The premier industrial community for tradesmen and contractors committed to excellence.</p>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Resources</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../blog.html">Blog</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../events.html">Events</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Privacy</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Connect</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../contact.html">Contact</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+            &copy; 2026 THE LONG SLOW GRIND. BUILT TO LAST.
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
