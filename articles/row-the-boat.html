@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Row the Boat | THE LONG SLOW GRIND</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "tertiary-fixed": "#d6e3ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#003d7a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#5c4300",
+                        "surface-tint": "#f6be39",
+                        "secondary-fixed": "#ffdfa0",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#00468b",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#cfb177",
+                        "on-surface-variant": "#d3c5ae",
+                        "tertiary-container": "#72a9ff",
+                        "on-secondary-fixed-variant": "#584414",
+                        "on-primary-container": "#503a00",
+                        "surface-container": "#20201f",
+                        "secondary-fixed-dim": "#e1c387",
+                        "tertiary-fixed-dim": "#a9c7ff",
+                        "primary-container": "#d4a017",
+                        "secondary": "#e1c387",
+                        "outline": "#9b8f7a",
+                        "outline-variant": "#4f4634",
+                        "primary-fixed-dim": "#f6be39",
+                        "on-primary": "#402d00",
+                        "surface-container-highest": "#353535",
+                        "on-secondary": "#402d00",
+                        "on-primary-fixed": "#261a00",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-tertiary": "#003062",
+                        "tertiary": "#a9c7ff",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-container": "#584414",
+                        "primary-fixed": "#ffdfa0",
+                        "surface-variant": "#353535",
+                        "on-background": "#e5e2e1",
+                        "inverse-primary": "#795900",
+                        "primary": "#f6be39"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            background-image: radial-gradient(rgba(212, 160, 23, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-grid-overlay {
+            background-image: linear-gradient(#D4A017 1px, transparent 1px), linear-gradient(90deg, #D4A017 1px, transparent 1px);
+            background-size: 100px 100px;
+            opacity: 0.03;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-xl border-b border-[#f6be39]/15 flex justify-between items-center px-6 h-20 transition-all duration-150 ease-linear">
+        <a href="../index.html" class="text-2xl font-black text-[#f6be39] tracking-tighter font-headline">THE LONG SLOW GRIND</a>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../index.html">Home</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../about.html">About</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../community.html">Community</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../mentorship.html">Mentorship</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../workshops.html">Workshops</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../resources.html">Resources</a>
+            <a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="../blog.html">Blog</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../events.html">Events</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../shop.html">Shop</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                JOIN THE GRIND
+            </button>
+            <!-- Mobile menu toggle -->
+            <button id="menu-toggle" class="md:hidden text-[#f6be39]">
+                <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+                <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#131313]/95 backdrop-blur-xl pt-24 px-6 overflow-y-auto">
+        <div class="flex flex-col space-y-6">
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../index.html">Home</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../about.html">About</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../community.html">Community</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../mentorship.html">Mentorship</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../workshops.html">Workshops</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../resources.html">Resources</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-[#f6be39]" href="../blog.html">Blog</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../events.html">Events</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../shop.html">Shop</a>
+            <div class="pt-6 border-t border-[#f6be39]/15">
+                <button class="w-full bg-primary text-on-primary px-6 py-4 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                    JOIN THE GRIND
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="pt-24 pb-20 relative">
+        <div class="absolute inset-0 industrial-grid-overlay pointer-events-none"></div>
+        <!-- Back link -->
+        <div class="max-w-3xl mx-auto px-6 pt-8 relative z-10">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back to Blog
+            </a>
+        </div>
+        <!-- Article Hero -->
+        <header class="relative z-10 mt-8 mb-16">
+            <div class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+                <div class="absolute inset-0 bg-surface-container-lowest">
+                    <img alt="Row the Boat" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtEb_VjF_i33yw_YLUtixCMRTArXCUKcEz4v90SxrkEgHN8DQ6BYu1I96kFYYkYwwCL_4KCsI2MCyt3iEWN6LcFmCVGpWGYMO5K7ZFG0W0bVbQ21QT_EzA-arHJBiAHrX-irJ3xjMAqz70gjc0sCjEXiiEGM8uVMohCs3afbCZIdnkMiT6jgBVLOL84RBIgXib_ApiokfvCkpb-FrtqZ3wtDawAlT-sNjkR4zJrQ_koxtldIn49gS38W8dytbmNqIAO8LHw06EjjoV" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                </div>
+                <div class="relative max-w-4xl mx-auto px-6 pb-12">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-xs uppercase tracking-widest text-primary">By Josh Cotner</span>
+                        <span class="text-on-surface-variant">•</span>
+                        <span class="text-xs uppercase tracking-widest text-on-surface-variant">11 APR 2026</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold font-headline uppercase leading-[0.95]">Row the Boat</h1>
+                </div>
+            </div>
+        </header>
+        <!-- Article Content -->
+        <article class="max-w-3xl mx-auto px-6 relative z-10">
+            <div class="text-lg leading-relaxed text-on-surface/90 space-y-6">
+                <p>Leadership isn't a title. It's not something you announce, and it's not something people give you just because you've been around long enough. Real leadership shows up in the small, unglamorous moments—when you roll up your sleeves and grab an oar. Every. Single. Day.</p>
+                <p>For a long time, I thought leadership meant getting to a point where I didn't have to grind anymore. Where I could step back, delegate, and just steer. But that's not how it works. If you want the boat to move, you row. And more importantly—you show your team how to row.</p>
+                <p>There was a season where everything felt heavy. Business was demanding more. Life at home was falling apart. I was going through a divorce, and no matter how much I tried to compartmentalize it, it followed me everywhere. Focus was harder. Energy was lower. And mentally, I was carrying more than I let people see.</p>
+                <p>But I still showed up. Because that's what leaders do.</p>
+                <p>Around that time, I went to the Conklin convention. Thousands of people in the room—around 8,000 or so. Big stage, big energy, the kind of event where you're supposed to leave fired up. John Maxwell was speaking. I remember sitting there, somewhere in the crowd, not expecting anything personal from it. Just hoping to pick up something—anything—that I could use.</p>
+                <p>And then it happened. In a room of 8,000 people, it felt like he was talking directly to me. He said this was going to be the best year of my life.</p>
+                <p>Now logically, that didn't make sense. Nothing about my situation at the time pointed to that being true. If anything, it felt like one of the hardest years I'd faced. But something about it stuck. Not because it was motivational—but because it challenged me. What if it could be? Not by luck. Not by circumstances changing overnight. But by how I showed up.</p>
+                <p>That's when I started to notice something. All the small things I'd been learning over the years—from trade shows, from conversations, from networking, from just being around people who were a step ahead—they were still there. Quiet. Waiting. Principles about consistency. About follow-up. About communication. About doing the little things right.</p>
+                <p>I hadn't ignored them. I just hadn't fully applied them.</p>
+                <p>So I leaned in. Nothing dramatic. No big overhaul. Just small changes. Being more intentional with conversations. Following up faster—and better. Listening more than I talked. Leading by example, not by instruction. Showing my team what it looked like to stay steady, even when life wasn't.</p>
+                <p>And I kept rowing. Day after day. No shortcuts. No excuses. Just consistent effort, even when I didn't feel like it. Especially then.</p>
+                <p>And slowly—almost quietly—things started to shift. The business got better. The team got stronger. Relationships deepened. Opportunities started showing up that hadn't been there before.</p>
+                <p>It wasn't overnight. It was alignment. All those years of learning, all those small adjustments—they finally clicked. Not because I learned something new, but because I finally lived what I already knew.</p>
+                <p>And that year? It was the best year of my life. Not because it was easy. But because I grew the most.</p>
+                <p>That's leadership. It's not about standing at the front of the boat telling people where to go. It's about grabbing an oar, setting the pace, and proving—day in and day out—that no matter what's going on around you… You keep rowing.</p>
+            </div>
+        </article>
+        <!-- Back to Blog Bottom -->
+        <div class="max-w-3xl mx-auto px-6 mt-16 relative z-10 border-t border-white/10 pt-8">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back to Blog
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+            <div class="col-span-1 md:col-span-1">
+                <div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+                <p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">The premier industrial community for tradesmen and contractors committed to excellence.</p>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Resources</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../blog.html">Blog</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../events.html">Events</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Privacy</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Connect</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../contact.html">Contact</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+            &copy; 2026 THE LONG SLOW GRIND. BUILT TO LAST.
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

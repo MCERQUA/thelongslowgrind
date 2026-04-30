@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Lone Wolf | THE LONG SLOW GRIND</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "tertiary-fixed": "#d6e3ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#003d7a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#5c4300",
+                        "surface-tint": "#f6be39",
+                        "secondary-fixed": "#ffdfa0",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#00468b",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#cfb177",
+                        "on-surface-variant": "#d3c5ae",
+                        "tertiary-container": "#72a9ff",
+                        "on-secondary-fixed-variant": "#584414",
+                        "on-primary-container": "#503a00",
+                        "surface-container": "#20201f",
+                        "secondary-fixed-dim": "#e1c387",
+                        "tertiary-fixed-dim": "#a9c7ff",
+                        "primary-container": "#d4a017",
+                        "secondary": "#e1c387",
+                        "outline": "#9b8f7a",
+                        "outline-variant": "#4f4634",
+                        "primary-fixed-dim": "#f6be39",
+                        "on-primary": "#402d00",
+                        "surface-container-highest": "#353535",
+                        "on-secondary": "#402d00",
+                        "on-primary-fixed": "#261a00",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-tertiary": "#003062",
+                        "tertiary": "#a9c7ff",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-container": "#584414",
+                        "primary-fixed": "#ffdfa0",
+                        "surface-variant": "#353535",
+                        "on-background": "#e5e2e1",
+                        "inverse-primary": "#795900",
+                        "primary": "#f6be39"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            background-image: radial-gradient(rgba(212, 160, 23, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-grid-overlay {
+            background-image: linear-gradient(#D4A017 1px, transparent 1px), linear-gradient(90deg, #D4A017 1px, transparent 1px);
+            background-size: 100px 100px;
+            opacity: 0.03;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-xl border-b border-[#f6be39]/15 flex justify-between items-center px-6 h-20 transition-all duration-150 ease-linear">
+        <a href="../index.html" class="text-2xl font-black text-[#f6be39] tracking-tighter font-headline">THE LONG SLOW GRIND</a>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../index.html">Home</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../about.html">About</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../community.html">Community</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../mentorship.html">Mentorship</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../workshops.html">Workshops</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../resources.html">Resources</a>
+            <a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="../blog.html">Blog</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../events.html">Events</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../shop.html">Shop</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                JOIN THE GRIND
+            </button>
+            <!-- Mobile menu toggle -->
+            <button id="menu-toggle" class="md:hidden text-[#f6be39]">
+                <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+                <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#131313]/95 backdrop-blur-xl pt-24 px-6 overflow-y-auto">
+        <div class="flex flex-col space-y-6">
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../index.html">Home</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../about.html">About</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../community.html">Community</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../mentorship.html">Mentorship</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../workshops.html">Workshops</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../resources.html">Resources</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-[#f6be39]" href="../blog.html">Blog</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../events.html">Events</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../shop.html">Shop</a>
+            <div class="pt-6 border-t border-[#f6be39]/15">
+                <button class="w-full bg-primary text-on-primary px-6 py-4 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                    JOIN THE GRIND
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="pt-24 pb-20 relative">
+        <div class="absolute inset-0 industrial-grid-overlay pointer-events-none"></div>
+        <!-- Back link -->
+        <div class="max-w-3xl mx-auto px-6 pt-8 relative z-10">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back to Blog
+            </a>
+        </div>
+        <!-- Article Hero -->
+        <header class="relative z-10 mt-8 mb-16">
+            <div class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+                <div class="absolute inset-0 bg-surface-container-lowest">
+                    <img alt="The Lone Wolf" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhsayGXHsQSuoHeXEwkgGAfbwane0PAz725NCcGfR31NC94wYWLr6U3XpDGH5-YKkUC-12lm4zZZw8bLl_t-cvWrYFZ4pU5tEbxIPzo_VCdZbdxk-vGjwuZOVrrHTEpn6ueFPrc3EfvQ4sLZHWUq6wU4WSOZKg83UNQ0fHYohkOs-pSDRYn2kqjfycd1kCsVpyTrEGopY9GcZAapmCWVsXzeu3E8WM1XEOluvCKHgasxrNG_uJQTB9g1_lSiqrMPV40ZwLODzDbfc8" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                </div>
+                <div class="relative max-w-4xl mx-auto px-6 pb-12">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-xs uppercase tracking-widest text-primary">By Josh Cotner</span>
+                        <span class="text-on-surface-variant">•</span>
+                        <span class="text-xs uppercase tracking-widest text-on-surface-variant">18 APR 2026</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold font-headline uppercase leading-[0.95]">The Lone Wolf</h1>
+                </div>
+            </div>
+        </header>
+        <!-- Article Content -->
+        <article class="max-w-3xl mx-auto px-6 relative z-10">
+            <div class="text-lg leading-relaxed text-on-surface/90 space-y-6">
+                <p>For a long time, I thought doing it alone was the advantage. No distractions. No splitting commissions. No relying on anyone else to follow through. If something went wrong, it was on me—and if it went right, it was because of me.</p>
+                <p>That mindset got me pretty far. I built my book one client at a time. Took every call. Solved every problem. Learned every detail of the business myself—policies, underwriting, claims, sales. I wore all of it like a badge of honor. The lone wolf.</p>
+                <p>And at first, it worked. I was faster than most. Sharper than most. More disciplined than most. While others were waiting on teammates or blaming someone else, I was executing.</p>
+                <p>But there's a ceiling to doing everything yourself. I started to feel it before I could explain it. Opportunities were coming in, but I couldn't keep up. Follow-ups slipped. Small things got missed. Not because I didn't care—but because there were only so many hours in a day. I was busy all the time… but not growing.</p>
+                <p>That's when it hit me: I wasn't building a business. I was building a job I couldn't escape. And the more successful I became, the heavier it got.</p>
+                <p>The breaking point wasn't dramatic. No big failure. No collapse. Just a quiet realization one night—sitting there, catching up on emails, knowing I'd be doing the same thing tomorrow, and the next day, and the next. If I kept going like this, I'd cap out. Not because of the market. Not because of competition. Because of me.</p>
+                <p>That was a hard pill to swallow.</p>
+                <p>Letting go of control didn't come naturally. Trusting someone else to handle a client, to represent the standard I had built—that felt risky. But staying stuck was riskier.</p>
+                <p>So I started small. One person. Then another. At first, it was uncomfortable. Things weren't done exactly how I would do them. There were mistakes. Miscommunications. Moments where I thought, "It would've been faster if I just did it myself."</p>
+                <p>But I stayed with it. Because slowly, something started to change.</p>
+                <p>The business stopped depending entirely on me. Clients were still taken care of—but now, they had more support. Problems got solved faster. Opportunities didn't slip through the cracks. I had space to think, to plan, to actually grow instead of just maintain.</p>
+                <p>And the biggest shift? I realized I wasn't losing control. I was multiplying it.</p>
+                <p>The lone wolf can hunt. But a pack can build something bigger.</p>
+                <p>Looking back, doing it alone taught me discipline. It built my foundation. It forced me to learn every piece of the game. But it also taught me my limits. And growth doesn't happen by staying where you're comfortable. It happens when you build something that's bigger than just you.</p>
+                <p>I'm still hands-on. Still care about every client, every detail. But now, I'm not alone. And because of that—we go farther.</p>
+            </div>
+        </article>
+        <!-- Back to Blog Bottom -->
+        <div class="max-w-3xl mx-auto px-6 mt-16 relative z-10 border-t border-white/10 pt-8">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back to Blog
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+            <div class="col-span-1 md:col-span-1">
+                <div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+                <p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">The premier industrial community for tradesmen and contractors committed to excellence.</p>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Resources</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../blog.html">Blog</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../events.html">Events</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Privacy</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Connect</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../contact.html">Contact</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+            &copy; 2026 THE LONG SLOW GRIND. BUILT TO LAST.
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
