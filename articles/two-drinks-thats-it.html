@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Two Drinks, That's It | THE LONG SLOW GRIND</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "tertiary-fixed": "#d6e3ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#003d7a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#5c4300",
+                        "surface-tint": "#f6be39",
+                        "secondary-fixed": "#ffdfa0",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#00468b",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#cfb177",
+                        "on-surface-variant": "#d3c5ae",
+                        "tertiary-container": "#72a9ff",
+                        "on-secondary-fixed-variant": "#584414",
+                        "on-primary-container": "#503a00",
+                        "surface-container": "#20201f",
+                        "secondary-fixed-dim": "#e1c387",
+                        "tertiary-fixed-dim": "#a9c7ff",
+                        "primary-container": "#d4a017",
+                        "secondary": "#e1c387",
+                        "outline": "#9b8f7a",
+                        "outline-variant": "#4f4634",
+                        "primary-fixed-dim": "#f6be39",
+                        "on-primary": "#402d00",
+                        "surface-container-highest": "#353535",
+                        "on-secondary": "#402d00",
+                        "on-primary-fixed": "#261a00",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-tertiary": "#003062",
+                        "tertiary": "#a9c7ff",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-container": "#584414",
+                        "primary-fixed": "#ffdfa0",
+                        "surface-variant": "#353535",
+                        "on-background": "#e5e2e1",
+                        "inverse-primary": "#795900",
+                        "primary": "#f6be39"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            background-image: radial-gradient(rgba(212, 160, 23, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-grid-overlay {
+            background-image: linear-gradient(#D4A017 1px, transparent 1px), linear-gradient(90deg, #D4A017 1px, transparent 1px);
+            background-size: 100px 100px;
+            opacity: 0.03;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-xl border-b border-[#f6be39]/15 flex justify-between items-center px-6 h-20 transition-all duration-150 ease-linear">
+        <a href="../index.html" class="text-2xl font-black text-[#f6be39] tracking-tighter font-headline">THE LONG SLOW GRIND</a>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../index.html">Home</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../about.html">About</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../community.html">Community</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../mentorship.html">Mentorship</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../workshops.html">Workshops</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../resources.html">Resources</a>
+            <a class="text-[#f6be39] border-b-2 border-[#f6be39] pb-1" href="../blog.html">Blog</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../events.html">Events</a>
+            <a class="text-white/70 hover:text-white transition-colors duration-200" href="../shop.html">Shop</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                JOIN THE GRIND
+            </button>
+            <!-- Mobile menu toggle -->
+            <button id="menu-toggle" class="md:hidden text-[#f6be39]">
+                <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+                <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#131313]/95 backdrop-blur-xl pt-24 px-6 overflow-y-auto">
+        <div class="flex flex-col space-y-6">
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../index.html">Home</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../about.html">About</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../community.html">Community</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../mentorship.html">Mentorship</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../workshops.html">Workshops</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../resources.html">Resources</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-[#f6be39]" href="../blog.html">Blog</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../events.html">Events</a>
+            <a class="text-xl font-bold uppercase tracking-wider text-white/70 hover:text-[#f6be39] transition-colors" href="../shop.html">Shop</a>
+            <div class="pt-6 border-t border-[#f6be39]/15">
+                <button class="w-full bg-primary text-on-primary px-6 py-4 font-bold tracking-tighter uppercase text-sm hover:bg-primary-container transition-all">
+                    JOIN THE GRIND
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="pt-24 pb-20 relative">
+        <div class="absolute inset-0 industrial-grid-overlay pointer-events-none"></div>
+        <!-- Back link -->
+        <div class="max-w-3xl mx-auto px-6 pt-8 relative z-10">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back to Blog
+            </a>
+        </div>
+        <!-- Article Hero -->
+        <header class="relative z-10 mt-8 mb-16">
+            <div class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+                <div class="absolute inset-0 bg-surface-container-lowest">
+                    <img alt="Two Drinks, That's It" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdPqbiSODRSqRB6WLz5ENB1IHF23SR4HuvbiLP47g1CEK42opcHU2mQCZzaQTiXY1uu8ZflucVFaxeXYACzN4pOg1hJsNLXiqsT--RNmsh8HcmkmmQ--LpEhtYJsvdd9gip6WmLOjrj6PP2GQrdd94RXjtdY2VIfVPU1U8RuJgrQ2x94z7kGPWYs9bP4xsL7WaWcIrlAYSml6_CMPM7ZteRBdGT6b-bkwhdrOD-76W504-etDzSrmp0zWhMMq4BgoZU69o5Y_STmGY" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                </div>
+                <div class="relative max-w-4xl mx-auto px-6 pb-12">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-xs uppercase tracking-widest text-primary">By Josh Cotner</span>
+                        <span class="text-on-surface-variant">•</span>
+                        <span class="text-xs uppercase tracking-widest text-on-surface-variant">28 MAR 2026</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold font-headline uppercase leading-[0.95]">Two Drinks, That's It</h1>
+                </div>
+            </div>
+        </header>
+        <!-- Article Content -->
+        <article class="max-w-3xl mx-auto px-6 relative z-10">
+            <div class="text-lg leading-relaxed text-on-surface/90 space-y-6">
+                <p>Rules matter more when nobody's watching. Especially at an open bar.</p>
+                <p>Mobile, Alabama. Trade show. Big opportunity. The kind where you're not just representing yourself—you're carrying your company's name on your back. Every conversation, every handshake, every impression counts.</p>
+                <p>And right out of the gate, things went sideways. My coworker missed his flight. Not because of delays. Not because of weather. Because he stayed out too late the night before drinking. So now it was just me. No backup. No safety net. Just me, the booth, and the responsibility.</p>
+                <p>That's when the rule kicked in: Two drinks. That's it.</p>
+                <p>Didn't matter if it was free. Didn't matter if everyone else was going all in. Didn't matter if the pressure was high and the nights were long. Two drinks. Because I didn't come to party—I came to perform.</p>
+                <p>And that decision mattered more than I realized at the time.</p>
+                <p>We were trying something different at that show. A livestream setup—way ahead of what most people in the industry were doing back then. The idea was solid. The execution? Depended on one thing we didn't fully control. The internet.</p>
+                <p>And it failed. Right in the middle of everything.</p>
+                <p>Now we're scrambling. Booth traffic. Expectations. Tech issues. No teammate. Just me trying to hold it together while things aren't going how they're supposed to.</p>
+                <p>That's where most people check out. Blame the Wi-Fi. Shrug it off. Go grab another drink.</p>
+                <p>But I stayed locked in. Because I was clear-headed. Because I kept my edge.</p>
+                <p>While the rest of the industry drained that bar—every drop of booze, every loud conversation, every layer of smoke and bravado—I found myself out back on the patio.</p>
+                <p>That's where the real education happened. Not on the main floor. Not in the presentations. Out back.</p>
+                <p>That's where I met Doug Commette. If you knew, you knew. A guy with a 5,000-domain funnel machine behind him—quietly shaping the direction of the industry. His marketing didn't just help you grow—it decided who grew. If he worked with you, you had leverage. If he worked with your competition, you felt it.</p>
+                <p>He wasn't handing out secrets. You had to earn those conversations. And I was there. Present. Engaged. Not half-lit, not distracted. Listening. Learning. Connecting dots I didn't even know existed before that night.</p>
+                <p>And then something else happened. A guy I had met online—just a random connection at the time, someone I had brought into the industry—he showed up. And he didn't just show up. He killed it. Confident. Prepared. Making moves. Holding his own in a room full of seasoned players.</p>
+                <p>That hit different. Because it reminded me—this isn't just about what you build for yourself. It's about who you bring with you. Who you pour into. Who you give a shot to. We weren't just contacts anymore. That was the start of something bigger.</p>
+                <p>By the end of that trip, I had been tested. Tech failed. Plans shifted. Pressure showed up early. But I didn't fold. I adapted. I stayed sharp while others faded. I learned more on that back patio than most people did the entire event.</p>
+                <p>And yeah—at times, it felt like I was dancing on marbles. Unstable. Unpredictable. Trying to find footing while everything around me was moving.</p>
+                <p>But I stayed up.</p>
+                <p>And when I got on that plane to head home, I wasn't the same. I had new knowledge. New perspective. And a new brother.</p>
+                <p>All because I stuck to one simple rule— Two drinks. That's it.</p>
+            </div>
+        </article>
+        <!-- Back to Blog Bottom -->
+        <div class="max-w-3xl mx-auto px-6 mt-16 relative z-10 border-t border-white/10 pt-8">
+            <a href="../blog.html" class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back to Blog
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#131313] w-full border-t-4 border-[#D4A017] pt-12 pb-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full px-8 py-12 max-w-7xl mx-auto font-['Space_Grotesk'] text-sm uppercase tracking-[0.05rem]">
+            <div class="col-span-1 md:col-span-1">
+                <div class="text-xl font-black text-[#D4A017] mb-6">THE LONG SLOW GRIND</div>
+                <p class="text-white/50 lowercase normal-case tracking-normal mb-6 leading-relaxed">The premier industrial community for tradesmen and contractors committed to excellence.</p>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Resources</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../blog.html">Blog</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../events.html">Events</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Privacy</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#D4A017] mb-4 font-bold">Connect</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="../contact.html">Contact</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">Instagram</a></li>
+                    <li><a class="text-white/50 hover:text-[#f6be39] transition-all" href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full text-center py-8 border-t border-white/5 text-white/30 text-[10px] tracking-[0.3em] font-bold">
+            &copy; 2026 THE LONG SLOW GRIND. BUILT TO LAST.
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
