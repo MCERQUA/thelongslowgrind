@@ -171,3 +171,83 @@ Date: 2026-05-21
 **Headline Finding**: Homepage is well-optimized, but 21/22 secondary pages lack meta descriptions, canonical tags, and structured data; missing sitemap and robots.txt prevent efficient indexing of 13 article pages.
 
 **Quick Win**: Create sitemap.xml + robots.txt + add meta descriptions to all pages → Expect 20-30% improvement in organic visibility within 4-6 weeks.
+
+---
+
+## 9. Structured Data Update — 2026-05-21
+
+Added JSON-LD `<script type="application/ld+json" id="ld-jsonld">` blocks to all 23 indexable pages. JSON validated by parse-back during injection.
+
+### Schema added by file
+
+**Homepage** — `index.html`
+- `WebSite` (name, url, description, publisher ref, inLanguage)
+- `Organization` (name, url, description, logo, founder Person: Josh Cotner)
+- Linked via `@graph` with `@id` cross-references
+
+**Articles** — 13 files under `/articles/` (`@graph` with Article + BreadcrumbList)
+| File | Headline | datePublished |
+|---|---|---|
+| 844-work-247.html | 844-WORK-247 | 2026-02-14 |
+| brand-is-everything.html | Brand Is Everything | 2026-02-07 |
+| digital-architect.html | Digital Architect | 2026-03-07 |
+| grind-until-they-know-your-name.html | Grind Until They Know Your Name | 2026-02-28 |
+| learn-more-every-year.html | Learn More Every Year | 2026-03-14 |
+| loyalty-is-everything.html | Loyalty Is Everything | 2026-02-21 |
+| not-always-the-right-choice.html | Not Always the Right Choice | 2026-03-21 |
+| overnight-success.html | Overnight Success (15 Years Later) | 2026-04-25 |
+| row-the-boat.html | Row the Boat | 2026-04-11 |
+| the-lone-wolf.html | The Lone Wolf | 2026-04-18 |
+| the-long-slow-grind.html | The Long Slow Grind | 2026-04-30 |
+| the-party-the-warning-and-the-preparation.html | The Party, The Warning, and The Preparation | 2026-04-04 |
+| two-drinks-thats-it.html | Two Drinks, That's It | 2026-03-28 |
+
+Per-article Article fields: `headline`, `mainEntityOfPage`, `url`, `author` (Person: Josh Cotner — from on-page byline), `publisher` (Organization: The Long Slow Grind w/ logo), `datePublished`, `dateModified` (same as datePublished — no separate modified timestamp visible in HTML), `image` (ImageObject from on-page hero `<img>` src+alt), `inLanguage`. BreadcrumbList: Home → Blog → Article.
+
+**Other top-level pages** — 9 files (`BreadcrumbList` only, 2 levels: Home → Page)
+- about.html, blog.html, community.html, contact.html, events.html, mentorship.html, resources.html, shop.html, workshops.html
+
+### Data sources
+- **Author** "Josh Cotner": pulled from on-page byline `<span class="text-xs uppercase tracking-widest text-primary">By Josh Cotner</span>` present on every article (uniform across all 13).
+- **Date**: parsed from on-page format `"30 APR 2026"` and converted to ISO `2026-04-30`. Present on every article.
+- **Headline**: from article `<h1>`.
+- **Image**: from article hero `<img>` (Google `lh3.googleusercontent.com` aida-public asset).
+- **Site description**: reused from the existing homepage `<meta name="description">` content.
+- **Logo**: existing `og:image` at `/assets/img/og-image.jpg` (no dedicated logo file present on site).
+
+### Data omitted (not fabricated)
+- **`articleSection` / category tags** — no categorisation visible in article HTML; omitted.
+- **`wordCount`** — not computed; would require parsing article body. Omitted.
+- **`dateModified` separate from datePublished** — no separate modified timestamp on the pages. Used `datePublished` as fallback for `dateModified` per Google guideline that the two may match when no later edits occurred.
+- **`Person.url` / `Person.sameAs`** — no LinkedIn/Twitter/personal-site link is exposed on any page for Josh Cotner. Person reduced to `{@type: Person, name}` only — no fabrication.
+- **`Organization.address` / `contactPoint`** — no postal address or phone visible. Omitted (would be required for a `LocalBusiness` type; sticking with `Organization`).
+- **`Organization.sameAs`** — footer shows Instagram/LinkedIn as `href="#"` placeholders (not real URLs). Omitted.
+- **Person schema for site owner** as a top-level entity — Josh Cotner appears only as the byline author and as Organization `founder`; no dedicated /about-Josh page or rich profile, so no standalone `Person` block was added.
+
+### Files changed (23)
+- `/workspace/Websites/thelongslowgrind.com/index.html`
+- `/workspace/Websites/thelongslowgrind.com/about.html`
+- `/workspace/Websites/thelongslowgrind.com/blog.html`
+- `/workspace/Websites/thelongslowgrind.com/community.html`
+- `/workspace/Websites/thelongslowgrind.com/contact.html`
+- `/workspace/Websites/thelongslowgrind.com/events.html`
+- `/workspace/Websites/thelongslowgrind.com/mentorship.html`
+- `/workspace/Websites/thelongslowgrind.com/resources.html`
+- `/workspace/Websites/thelongslowgrind.com/shop.html`
+- `/workspace/Websites/thelongslowgrind.com/workshops.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/844-work-247.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/brand-is-everything.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/digital-architect.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/grind-until-they-know-your-name.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/learn-more-every-year.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/loyalty-is-everything.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/not-always-the-right-choice.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/overnight-success.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/row-the-boat.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/the-lone-wolf.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/the-long-slow-grind.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/the-party-the-warning-and-the-preparation.html`
+- `/workspace/Websites/thelongslowgrind.com/articles/two-drinks-thats-it.html`
+
+### Insertion mechanic
+Each block is inserted immediately before `</head>` and tagged with `id="ld-jsonld"` for idempotent re-runs. Injector script: `/tmp/add_jsonld.py` (parse-back validation step before write).
