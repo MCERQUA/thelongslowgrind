@@ -251,3 +251,16 @@ Per-article Article fields: `headline`, `mainEntityOfPage`, `url`, `author` (Per
 
 ### Insertion mechanic
 Each block is inserted immediately before `</head>` and tagged with `id="ld-jsonld"` for idempotent re-runs. Injector script: `/tmp/add_jsonld.py` (parse-back validation step before write).
+
+## Round 3 — repaired 2026-05-22
+- **Domain: confirmed** `https://thelongslowgrind.com` (in source + index canonical).
+- **22 secondary pages upgraded** with full SEO header block (was only index.html before). Per-page injection via `/tmp/tlsg_seo_inject.py`, idempotent (skips if `meta description` already present):
+  - 9 top-level pages: about, blog, community, contact, events, mentorship, resources, shop, workshops.
+  - 13 article pages under `/articles/`.
+  - Each gets: `<meta name="description">` (page-specific, ~140–220 chars), `<link rel="canonical">` (self-referential to the absolute URL), full Open Graph block (og:type — `website` for top-level, `article` for /articles/; og:url, og:title, og:description, og:image, og:image:alt, og:site_name, og:locale), and Twitter Card (summary_large_image with url, title, description, image, image:alt). All descriptions hand-written from the article slug + on-page context — no scraping/fabrication.
+- **Files created:**
+  - `sitemap.xml` — all 23 indexable URLs (1 home + 9 top + 13 articles), with `lastmod` set to each article's published date (parsed from the existing JSON-LD `datePublished` in Round 2's audit table) and to 2026-05-22 for non-article pages.
+  - `robots.txt` — allow-all + AI-crawler whitelist + sitemap reference; disallow `/ai/screens/` (design mockups not part of public site, per §2 note).
+  - `404.html` — branded custom 404 matching the dark/primary-amber theme from the site CSS variables (`#f6be39` primary, `#131313` surface), with home CTA. Netlify auto-serves it with 404 status for unmatched routes (built-in behavior, no `netlify.toml` change needed).
+- **Skipped:** §8 item 8 (audit 4 missing alt texts) — out of scope for a SEO header sweep; alt-text triage flagged separately for a content pass. JSON-LD Article schema already in place on all 13 article pages from Round 2. Did not touch index.html (already complete from prior work).
+- **Validation:** Python loop confirmed all 22 secondary pages now carry `<meta name="description">`, `<link rel="canonical">`, `<meta property="og:title">`, `<meta name="twitter:card">`. `sitemap.xml` parsed clean via `xml.etree.ElementTree`.
